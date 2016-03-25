@@ -1,7 +1,6 @@
 
 # QAPMaDS
-A free operating system with the editors, IDE's and environments for  
-software development on Mobile devices, Servers, Personal Computers and more.
+A free operating system with the editors, IDE's and environments for software development on Mobile devices, Servers, Personal Computers and more.
 Micrometre's operating system, referred to herein as the QAPMaDS: Quality Assurance, Project Management and Development Software stack.
 This version of the QAPMaDS uses the standard Ubuntu 14.04 LTS (Long Term Support) LINUX platform to host the software.  
 
@@ -9,13 +8,13 @@ Who it is for?
 People interested in learning about Open Source Software and the collaborative community.  
 Students wishing to learn about software creation with industry standard software.
 
-The QAPMaDS stack to provides a popular Linux distro (ubuntu) and the necessary tools to start experimenting with:
+The QAPMaDS stack to provides a popular Linux distro (Ubuntu) and the necessary tools to start experimenting with:
 BDD with Automation Testing Frameworks  
-Perform automated tests upon the GUI and included web browsers using the following environment frameworks:  
+Perform automated tests with the included web browsers using the following environment frameworks:  
 Ruby - including Ruby-On-Rails and gems such as Testgen, Gherkin, cucumber etc.  
 Python - web2py and DJANGO.  
-JavaScript - including C-Sharp, NodeJS, Sikulix  
-elenium and Watir Web Drivers are able to control the included Firefox and Chrome web browsers.
+JavaScript - including C-Sharp and NodeJS.
+Selenium and Watir Web Drivers are able to control the included Firefox and Chrome web browsers.
 
 Editors & IDE's
 Use the included Editors and IDE's to create and execute code written in the included development languages.  
@@ -31,7 +30,6 @@ IDE's
 MonoDevelop  
 Android Studio    
 google web designer  
-Sikulix  
 
 Management Tools  
 MySQL WorkBench  
