@@ -1,7 +1,7 @@
 
 # QAPMaDS
 A free operating system with the editors, IDE's and environments for software development on Mobile devices, Servers, Personal Computers and more.
-Micrometre's operating system, referred to herein as the QAPMaDS: Quality Assurance, Project Management and Development Software stack.
+Micrometre's operating system, referred to herein as the QAPMaDS (Quality Assurance, Project Management and Development Software) stack.
 This version of the QAPMaDS uses the standard Ubuntu 14.04 LTS (Long Term Support) LINUX platform to host the software.  
 
 Who it is for?  
@@ -42,6 +42,9 @@ Virtualisation:
 Docker
 
 Office Tools
-Chrome App Launcher – use office suites from google play. (Requires user has a google account). 
+Chrome App Launcher – use office suites from google play. (Requires a google account). 
 
 All of this and more provided ready to use and configured after installation on a virtual machine or compatible hardware.
+
+Download the ISO:
+https://onedrive.live.com/redir?resid=A0D374275F1FD761!131&authkey=!ADP1XNFgOH26rGU&ithint=file%2ciso
