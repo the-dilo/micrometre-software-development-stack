@@ -10,7 +10,7 @@ Students wishing to learn about software creation with industry standard softwar
 
 The QAPMaDS stack provides a popular Linux distro (Ubuntu) and the necessary tools to start experimenting with:
 BDD with Automation Testing Frameworks  
-Perform automated tests with the included web browsers using the following environment frameworks:  
+Performing automated tests with the included web browsers using the following environment frameworks:  
 Ruby - including Ruby-On-Rails and gems such as Testgen, Gherkin, cucumber etc.  
 Python - web2py and DJANGO.  
 JavaScript - including C-Sharp and NodeJS.
