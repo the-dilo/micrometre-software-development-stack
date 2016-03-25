@@ -13,10 +13,10 @@ BDD with Automation Testing Frameworks
 Performing automated tests with the included web browsers using the following environment frameworks:  
 Ruby - including Ruby-On-Rails and gems such as Testgen, Gherkin, cucumber etc.  
 Python - web2py and DJANGO.  
-JavaScript - including C-Sharp and NodeJS.
+JavaScript - including C-Sharp and NodeJS.  
 Selenium and Watir Web Drivers are able to control the included Firefox and Chrome web browsers.
 
-Editors & IDE's
+Editors & IDE's  
 Use the included Editors and IDE's to create and execute code written in the included development languages.  
 Kate  
 Atom  
