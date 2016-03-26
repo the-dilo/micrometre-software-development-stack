@@ -31,10 +31,8 @@ google web designer
 
 Management Tools  
 MySQL WorkBench  
-PhPMYAdmin  
-webmin    
 SystemBack  
-Android Debug Bridge      
+      
 
 Virtualisation:  
 Docker
