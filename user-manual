@@ -1,0 +1,21 @@
+after downloading the iso you will need to prepare a bootable media, dvd or usb drive will work
+
+for Microsoft Windows users head to pendrive linux http://www.pendrivelinux.com/  download  and install Universal USB Installer 
+
+a usb removable drive with a minimum of 4gb is needed for this iso
+
+follow the instruction to pick the correct drive and micrometre.iso
+
+after preparing the boot media
+
+restart your computer and enter the boot menu by reapply pressing del , f12,f8
+the above depends on the manufacturers most use f12 or del 
+
+keep heating those buttons and you will be presented with a menu 
+
+look for usb removable media and hit enter
+
+you will be presented with the boot menu for micrometre OS 
+
+choose the default option recommended
+
