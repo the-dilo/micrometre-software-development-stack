@@ -28,6 +28,12 @@ apt-get install -y python-django
 apt-get install -y ruby1.9.1 ruby1.9.1-full ruby1.9.1 ruby1.9.1-dev ri1.9.1 
 apt-get install -y libopenssl-ruby1.9.1 rubygems1.9.1 irb1.9.1 ri1.9.1 rdoc1.9.1
 apt-get install -y libssl-dev zlib1g-dev sqlite3 libsqlite3-dev 
+#
+#install ruby-2.0
+#sudo add-apt-repository ppa:brightbox/ruby-ng-experimental
+#sudo apt-get update
+#sudo apt-get install -y ruby2.0 ruby2.0-dev ruby2.0-doc
+#
 #update the ruby-gems component
 gem install -y rubygems-update
 #installs the gems ruby requires to perform automation 
