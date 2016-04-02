@@ -18,7 +18,6 @@ Selenium and Watir Web Drivers are able to control the included Firefox and Chro
 
 Editors & IDE's  
 Use the included Editors and IDE's to create and execute code written in the included development languages.  
-Kate  
 Atom  
 Brackets  
 Eclipse  
