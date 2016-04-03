@@ -24,12 +24,12 @@ apt-get update
 apt-get install -y python python3 python-pip python-software-properties
 apt-get update
 apt-get install -y python-django
+#Ruby
 add-apt-repository ppa:brightbox/ruby-ng-experimental
 apt-get install -y ruby2.0-full ruby2.0-dev ruby2.0-doc ri2.0
 apt-get install -y libopenssl-ruby1.9.1 rubygems1.9.1 irb1.9.1 ri1.9.1 rdoc1.9.1
 apt-get install -y libssl-dev zlib1g-dev sqlite3 libsqlite3-dev 
 apt-get update
-
 #update the ruby-gems component
 gem install -y rubygems-update
 #installs the gems ruby requires to perform automation 
@@ -57,6 +57,10 @@ gem install web-console
 gem install railties
 gem install rails
 apt-get update
+#atom editor
+add-apt-repository ppa:webupd8team/atom -y
+apt-get update
+apt-get install -y atom
 #install chromedriver
 wget -N http://chromedriver.storage.googleapis.com/2.10/chromedriver_linux64.zip -P ~/Downloads
 unzip ~/Downloads/chromedriver_linux64.zip -d ~/Downloads
