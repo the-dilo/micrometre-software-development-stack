@@ -1,8 +1,8 @@
 #!/bin/sh
 apt-get update && upgrade
 apt-get install -y build-essential curl libsqlite3-dev #
-apt-get install -y kate classicmenu-indicator nautilus-open-terminal
-#apt-get install -y checkinstall
+#apt-get install -y kate classicmenu-indicator nautilus-open-terminal
+apt-get install -y checkinstall
 apt-get install -y libfribidi-bin ubiquity tasksel wget unzip 
 apt-get install -y chromium-chromedriver chromium-chromedriver-dbg 
 apt-get install -y android-tools-adb android-tools-fastboot
