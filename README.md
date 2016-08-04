@@ -1,5 +1,5 @@
 
-Ubuntu 16.04  with the editors,  and environments for software development on Mobile devices, Servers, Personal Computers and more.
+Ubuntu 16.04  with the editors,  and environments for software development on 
 Linux distro (Ubuntu) and the necessary tools to start experimenting with:
 BDD with Automation Testing Frameworks  
 Performing automated tests with the included web browsers using the following environment frameworks:  
