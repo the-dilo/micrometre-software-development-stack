@@ -7,11 +7,7 @@ apt-get install -y oracle-java8-installer
 apt-get install -y oracle-java8-set-default
 apt-get update
 # Script to install the NodeSource Node.js
-
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-
-
-
 apt-get install -y nodejs
 apt-get update
 #npm packages for webdrivers
