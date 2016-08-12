@@ -17,6 +17,7 @@ npm install -g selenium-webdriver
 npm install -g selenium-standalone 
 npm install -g chromedriver 
 npm install -g selenium-webdriver 
+npm install -g geckodriver
 npm install -g casperjs 
 npm install -g webdriverio #bf4040
 npm install -g npm-check-updates
