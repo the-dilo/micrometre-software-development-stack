@@ -58,4 +58,4 @@ apt-get install -y unzip
 apt-get install -y openssh-server 
 apt-get update
 #android debug
-apt-get install android-tools-fastboot android-tools-adb
+apt-get install android-tools-fastboot android-tools-adb squashfs-tools genisoimage syslinux
