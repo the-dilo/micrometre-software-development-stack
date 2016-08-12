@@ -11,7 +11,6 @@ echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" |   tee /etc/ap
 apt-get update
 apt-get purge lxc-docker
 apt-cache policy docker-engine
-apt-get install -y linux-image-extra-$(uname -r)
 apt-get update
 apt-get install -y docker-engine
 groupadd micrometre
