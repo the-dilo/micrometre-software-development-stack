@@ -1,3 +1,4 @@
+#!/bin/bash
 #Install Useful Apps
 apt-get install -y  vim git secure-delete
 apt-get install -y flashplugin-installer
