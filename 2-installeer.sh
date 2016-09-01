@@ -80,5 +80,5 @@ apt-add-repository ppa:paolorotolo/android-studio -y
 apt-get update
 apt-get install -y  android-studio
 #extras
-apt-get install gedit-plugins  mysql-workbench 
+apt-get install -y gedit-plugins  mysql-workbench 
 apt-get update
