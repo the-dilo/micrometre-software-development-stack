@@ -6,7 +6,7 @@ apt-get install -y unity-tweak-tool dconf-editor gnome-disk-utility
 apt-get update
 apt-get install -y classicmenu-indicator
 #Install Papirus Icon Theme on Ubuntu 16.04 LTS
-add-apt-repository ppa:varlesh-l/papirus-pack
+add-apt-repository ppa:varlesh-l/papirus-pack -y
 apt-get update 
 apt-get install -y papirus-gtk-icon-theme
 #Click on the same icon again to minimise the app.
