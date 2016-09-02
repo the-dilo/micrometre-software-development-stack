@@ -1,12 +1,20 @@
 # /bin/bash
 #Update synchronizes list of available packages with the servers in source repositories.
 apt-get update
-#npm packages for webdrivers
-npm install -g jason
-npm install -g phantomjs 
-npm install -g selenium-webdriver
-npm install -g chromedriver 
-npm install -g casperjs 
-npm install -g webdriverio 
+#npm packages f
+npm -g install --save jason
+npm -g install --save phantomjs 
+npm -g install --save selenium-webdriver
+npm -g install --save chromedriver
+npm -g install --save casperjs 
+npm -g install --save webdriverio 
+npm -g install --save geckodriver 
+npm -g install --save chromedriver 
+npm -g install --save jasmine
+npm -g install --save cheerio
+npm -g install --save android
+npm -g install --save webdriverjs
+npm -g install express --save
+npm install selenium-standalone@latest -g
+selenium-standalone install
 npm install -g npm-check-updates
-npm install -g geckodriver
