@@ -1,22 +1,34 @@
 
-Ubuntu 16.04  with the editors,  and environments for software development on 
-Linux distro and the necessary tools to start experimenting with:
-BDD with Automation Testing Frameworks  
-Performing automated tests with the included web browsers using the following environment frameworks:  
-Ruby - including Ruby-On-Rails and gems such as Testgen, Gherkin, cucumber etc.  
-JavaScript - including and NodeJS.  
-Selenium and Watir Web Drivers are able to control the included Firefox and Chrome web browsers.
-Editors & IDE's  
-Use the included Editors and IDE's to create and execute code written in the included development languages.  
-Atom  
-Brackets  
-Sublime Text  
-Visual Studio Code  
-Android Studio    
-MySQL WorkBench  
-Docker
+Ubuntu 16.04  with up to date tools for software devlopers and testers.
+LXD container hypervisor
+Dockersoftware containerization platform 
+Snapcraft tool for creating Snap universal packages
+Eclipse Che workspace server and cloud IDE
+Atom hackabl text editor.
+Sublime Text  editor for code, markup and prose.
+Android Studio tools for building apps for Android device.    
+Visual Studio Code code editor
+MySQL WorkBench visual tool for database . 
+Firefox and Chrome web browsers with Web Drivers 
+
+Getting Started
+To run or install the ISO, you need a USB stick with at least 4GB of free space.
+These instructions will get you a copy of the the ISO and  how to Create bootable USB,
+
+Notes
+it's recomanded to try the  live system before going fo full system install.
+for local machine development and testing purposes it's recomanded to do a full installl
+
+
+
+
+
+
+
+
+  
+
 
 
 
 Download the ISO:
-https://drive.google.com/folderview?id=0B0f60Lr5TABzZVg4M3ZzblV5c2c&usp=sharing
