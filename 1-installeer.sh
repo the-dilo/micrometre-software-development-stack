@@ -59,3 +59,68 @@ apt-get install -y openssh-server
 apt-get update
 #android debug
 apt-get install -y android-tools-fastboot android-tools-adb squashfs-tools genisoimage syslinux
+apt-get install -y  firefox xvfb
+apt-get update
+apt-get install -y  apt-transport-https ca-certificates
+apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" |   tee /etc/apt/sources.list.d/docker.list
+apt-get update
+apt-get purge lxc-docker
+apt-cache policy docker-engine
+apt-get update
+apt-get install -y docker-engine
+groupadd docker
+usermod -aG docker micrometre
+apt-get update
+apt-get install -y ubiquity
+apt-add-repository ppa:paolorotolo/android-studio -y 
+apt-get update
+apt-get install -y  android-studio
+#extras
+apt-get install -y gedit-plugins  mysql-workbench 
+apt-get update
+
+apt-get update
+apt-get install -y ubiquity
+#sublime editor
+add-apt-repository ppa:webupd8team/sublime-text-3 -y
+apt-get update
+apt-get install -y sublime-text
+apt-get update
+#atom editor
+add-apt-repository ppa:webupd8team/atom -y
+apt-get update
+apt-get install -y atom
+apt-get install -y gedit-plugins   
+apt-get update
+apt-get update
+apt-get install -y unity-tweak-tool dconf-editor gnome-disk-utility
+#classicMenu Indicator is a notification area applet (application indicator) for the top panel of Ubuntu's Unity desktop
+apt-get update
+apt-get install -y classicmenu-indicator
+#Install Papirus Icon Theme on Ubuntu 16.04 LTS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
