@@ -1,5 +1,5 @@
 
-Ubuntu 16.04  with up to date tools for software devlopers and testers.
+Ubuntu 16.04  with up to date tools for software devlopers.
 
 LXD container hypervisor
 
