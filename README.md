@@ -1,5 +1,5 @@
 
-Ubuntu 16.04  with up to date tools for software devlopers.
+Ubuntu 16.04  with 
 
 LXD container hypervisor
 
