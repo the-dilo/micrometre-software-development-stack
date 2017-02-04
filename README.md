@@ -25,7 +25,9 @@ Getting Started
 
 To run or install the ISO, you need a USB stick with at least 4GB of free space.
 
-These instructions will get you a copy of the the ISO and  how to Create bootable USB,
+ 
+
+Create bootable USB,
 
 Notes
 
