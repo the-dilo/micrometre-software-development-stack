@@ -102,9 +102,8 @@ apt-get install -y apt-transport-https
 apt install lxd
 usermod -aG lxd micrometre
 #Dockersoftware containerization platform
-apt-get purge lxc-docker
 apt-cache policy docker-engine
-apt-get update
+apt-get purge lxc-docker
 apt-get update
 apt-get install curl \
     linux-image-extra-$(uname -r) \
@@ -118,12 +117,13 @@ add-apt-repository \
        "deb https://apt.dockerproject.org/repo/ \
        ubuntu-$(lsb_release -cs) \
        main"
- 
-#Update the apt package index.
+ #Update the apt package index.
 apt-get update
 #Install the latest version of Docker.
 apt-get -y install docker-engine 
+#Create a group for Docker
 groupadd docker
+#add a user to the Docker Group
 usermod -aG docker micrometre
 apt-get update
 #live CD installer
@@ -134,7 +134,12 @@ apt-get update
 #classicMenu Indicator is a notification area applet (application indicator) for the top panel of Ubuntu's Unity desktop
 apt-get update
 apt-get install -y classicmenu-indicator
-
+#Install Useful Apps
+apt-get install -y  vim git secure-delete
+apt-get install -y flashplugin-installer
+apt-get install -y p7zip-rar p7zip-full unace unrar zip unzip rar 
+#Purge Unwanted Apps
+apt-get purge gnomine gnome-sudoku gnome-mahjongg
 
 
 
