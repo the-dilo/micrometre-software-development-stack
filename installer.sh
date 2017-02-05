@@ -100,11 +100,11 @@ apt-get install -y  ca-certificates apt-transport-https
 #https download transport for APT
 apt-get install -y apt-transport-https 
 #LXD  is the lightervisor, or lightweight container hypervisor.
-apt install lxd
+apt install -y lxd
 usermod -aG lxd micrometre
 #Dockersoftware containerization platform
 apt-cache policy docker-engine
-apt-get purge lxc-docker
+apt-get purge -y lxc-docker
 apt-get update
 apt-get install curl \
     linux-image-extra-$(uname -r) \
@@ -113,7 +113,7 @@ apt-get install curl \
 curl -fsSL https://yum.dockerproject.org/gpg | apt-key add -
 #Verify that the key ID is 58118E89F3A912897C070ADBF76221572C52609D.
 apt-key fingerprint 58118E89F3A912897C070ADBF76221572C52609D
-apt-get install software-properties-common
+apt-get install -y software-properties-common
 add-apt-repository \
        "deb https://apt.dockerproject.org/repo/ \
        ubuntu-$(lsb_release -cs) \
