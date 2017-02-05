@@ -102,13 +102,27 @@ apt-get install -y apt-transport-https
 apt install lxd
 usermod -aG lxd micrometre
 #Dockersoftware containerization platform
-apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
-echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" |   tee /etc/apt/sources.list.d/docker.list
-apt-get update
 apt-get purge lxc-docker
 apt-cache policy docker-engine
 apt-get update
-apt-get install -y docker-engine
+apt-get update
+apt-get install curl \
+    linux-image-extra-$(uname -r) \
+    linux-image-extra-virtual
+#Add Docker’s official GPG key:
+curl -fsSL https://yum.dockerproject.org/gpg | sudo apt-key add -
+#Verify that the key ID is 58118E89F3A912897C070ADBF76221572C52609D.
+apt-key fingerprint 58118E89F3A912897C070ADBF76221572C52609D
+apt-get install software-properties-common
+add-apt-repository \
+       "deb https://apt.dockerproject.org/repo/ \
+       ubuntu-$(lsb_release -cs) \
+       main"
+ 
+#Update the apt package index.
+apt-get update
+#Install the latest version of Docker.
+apt-get -y install docker-engine 
 groupadd docker
 usermod -aG docker micrometre
 apt-get update
