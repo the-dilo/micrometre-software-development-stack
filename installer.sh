@@ -139,7 +139,7 @@ apt-get install -y  vim git secure-delete
 apt-get install -y flashplugin-installer
 apt-get install -y p7zip-rar p7zip-full unace unrar zip unzip rar 
 #Purge Unwanted Apps
-apt-get purge gnomine gnome-sudoku gnome-mahjongg
+apt-get purge -y gnomine gnome-sudoku gnome-mahjongg
 
 
 
