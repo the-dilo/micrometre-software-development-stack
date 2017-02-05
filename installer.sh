@@ -140,9 +140,28 @@ apt-get install -y flashplugin-installer
 apt-get install -y p7zip-rar p7zip-full unace unrar zip unzip rar 
 #Purge Unwanted Apps
 apt-get purge -y gnomine gnome-sudoku gnome-mahjongg
-
-
-
+#delete unnecessary files from the system
+apt-get update
+apt-get install bleachbit
+#system backup and restore application with extra features
+add-apt-repository ppa:nemh/systemback
+apt-get update
+apt-get install systemback
+#install google chrome stable
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dpkg -i google-chrome-stable_current_amd64.deb
+apt install -f
+apt-get update
+dpkg --configure -a
+apt-get update
+wget https://az764295.vo.msecnd.net/stable/27240e71ef390bf2d66307e677c2a333cebf75af/code_1.9.0-1486023356_amd64.deb
+dpkg -i code_1.9.0-1486023356_amd64.de
+apt install -f
+apt-get update
+dpkg --configure -a
+apt-get update
+rm google-chrome-stable_current_amd64.deb
+apt-get autoremove
 
 
 
