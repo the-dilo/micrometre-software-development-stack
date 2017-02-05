@@ -1,11 +1,6 @@
 # /bin/bash
 #Update synchronizes list of available packages with the servers in source repositories.
-apt-get update
-add-apt-repository ppa:webupd8team/java -y
-apt-get update
-apt-get install -y oracle-java8-installer
-apt-get install -y oracle-java8-set-default
-apt-get update
+
 # Script to install the NodeSource Node.js
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 apt-get install -y nodejs
@@ -60,25 +55,4 @@ gem2.3 update --system
 apt-get update
 #offical ubuntu installer (has issue with Docker Containers)
 apt-get update
-apt-get install -y ubiquity
-#sublime editor
-add-apt-repository ppa:webupd8team/sublime-text-3 -y
-apt-get update
-apt-get install -y sublime-text
-apt-get update
-#atom editor
-add-apt-repository ppa:webupd8team/atom -y
-apt-get update
-apt-get install -y atom
-# https://atom.io/packages/script allows one to run scripts within atom!!
-#brackets
-add-apt-repository ppa:webupd8team/brackets -y
-apt-get update
-apt-get install -y brackets
-#android studio
-apt-add-repository ppa:paolorotolo/android-studio -y 
-apt-get update
-apt-get install -y  android-studio
-#extras
-apt-get install -y gedit-plugins  mysql-workbench 
-apt-get update
+
