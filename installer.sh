@@ -138,8 +138,7 @@ apt-get install -y classicmenu-indicator
 apt-get install -y  vim git secure-delete
 apt-get install -y flashplugin-installer
 apt-get install -y p7zip-rar p7zip-full unace unrar zip unzip rar 
-#Purge Unwanted Apps
-apt-get purge -y gnomine gnome-sudoku gnome-mahjongg
+
 #delete unnecessary files from the system
 apt-get update
 apt-get install bleachbit
@@ -160,11 +159,24 @@ apt install -f
 apt-get update
 dpkg --configure -a
 apt-get update
-rm google-chrome-stable_current_amd64.deb
+rm code_1.9.0-1486023356_amd64.deb
+#Remove “System Program Problem Detected” Messages From Ubuntu
+rm /var/crash/*
+systemctl status apport.service 
+systemctl stop apport.service 
+systemctl disable apport.service.
+#disable online results
+gsettings set com.canonical.Unity.Lenses remote-content-search n
+#Purge Unwanted Apps
+apt-get remove unity-lens-shopping.
+apt-get purge -y gnomine gnome-sudoku gnome-mahjongg
+#this command will prevent the Amazon icon from showing up in the dash:
+rm -rf /usr/share/applications/ubuntu-amazon-default.desktop
+#prevent it from showing up in the dash:
+cp /usr/share/applications/ubuntu-amazon-default.desktop ~/.local/share/applications/ubuntu-amazon-default.desktop
+echo Hidden=true >> ~/.local/share/applications/ubuntu-amazon-default.desktop
+apt-get update
 apt-get autoremove
-
-
-
 
 
 
