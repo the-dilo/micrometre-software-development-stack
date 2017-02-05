@@ -9,7 +9,6 @@ npm -g install --save chromedriver
 npm -g install --save casperjs 
 npm -g install --save webdriverio 
 npm -g install --save geckodriver 
-npm -g install --save chromedriver 
 npm -g install --save jasmine
 npm -g install --save cheerio
 npm -g install --save android
