@@ -106,7 +106,7 @@ usermod -aG lxd micrometre
 apt-cache policy docker-engine
 apt-get purge -y lxc-docker
 apt-get update
-apt-get install curl \
+apt-get install -y curl \
     linux-image-extra-$(uname -r) \
     linux-image-extra-virtual
 #Add Docker’s official GPG key:
@@ -144,33 +144,23 @@ apt-get install -y p7zip-rar p7zip-full unace unrar zip unzip rar
 apt-get update
 apt-get install bleachbit
 #system backup and restore application with extra features
-add-apt-repository ppa:nemh/systemback
+add-apt-repository ppa:nemh/systemback -y
 apt-get update
-apt-get install systemback
+apt-get install -y systemback
 #install google chrome stable
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 dpkg -i google-chrome-stable_current_amd64.deb
 apt install -f
 apt-get update
+rm google-chrome-stable_current_amd64.deb
 dpkg --configure -a
 apt-get update
-wget https://az764295.vo.msecnd.net/stable/27240e71ef390bf2d66307e677c2a333cebf75af/code_1.9.0-1486023356_amd64.deb
-dpkg -i code_1.9.0-1486023356_amd64.de
-apt install -f
-apt-get update
-dpkg --configure -a
-apt-get update
-rm code_1.9.0-1486023356_amd64.deb
 #Remove “System Program Problem Detected” Messages From Ubuntu
 rm /var/crash/*
 systemctl status apport.service 
 systemctl stop apport.service 
 systemctl disable apport.service.
 #disable online results
-gsettings set com.canonical.Unity.Lenses remote-content-search n
-#Purge Unwanted Apps
-apt-get remove unity-lens-shopping.
-apt-get purge -y gnomine gnome-sudoku gnome-mahjongg
 #this command will prevent the Amazon icon from showing up in the dash:
 rm -rf /usr/share/applications/ubuntu-amazon-default.desktop
 #prevent it from showing up in the dash:
