@@ -3,7 +3,7 @@ Ubuntu 16.04  with
 
 LXD container hypervisor
 
-Dockersoftware containerization platform 
+Docker software containerization platform 
 
 Snapcraft tool for creating Snap universal packages
 
@@ -45,6 +45,3 @@ for local machine development and testing purposes it's recomanded to do a full 
   
 
 
-
-
-Download the ISO:
