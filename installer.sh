@@ -65,6 +65,7 @@ apt-get install -y oracle-java8-installer
 apt-get install -y oracle-java8-set-default
 apt-get update
 #Sublime Text editor for code and markup.
+add-apt-repository ppa:webupd8team/sublime-text-3
 apt-get install -y sublime-text
 apt-get update
 #Atom hackabl text editor.
@@ -109,7 +110,7 @@ apt-get install curl \
     linux-image-extra-$(uname -r) \
     linux-image-extra-virtual
 #Add Docker’s official GPG key:
-curl -fsSL https://yum.dockerproject.org/gpg | sudo apt-key add -
+curl -fsSL https://yum.dockerproject.org/gpg | apt-key add -
 #Verify that the key ID is 58118E89F3A912897C070ADBF76221572C52609D.
 apt-key fingerprint 58118E89F3A912897C070ADBF76221572C52609D
 apt-get install software-properties-common
