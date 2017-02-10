@@ -1,324 +1,542 @@
-@font-face {
-  font-family: 'Noto Sans';
-  font-weight: 400;
-  font-style: normal;
-  src: url('../fonts/Noto-Sans-regular/Noto-Sans-regular.eot');
-  src: url('../fonts/Noto-Sans-regular/Noto-Sans-regular.eot?#iefix') format('embedded-opentype'),
-       local('Noto Sans'),
-       local('Noto-Sans-regular'),
-       url('../fonts/Noto-Sans-regular/Noto-Sans-regular.woff2') format('woff2'),
-       url('../fonts/Noto-Sans-regular/Noto-Sans-regular.woff') format('woff'),
-       url('../fonts/Noto-Sans-regular/Noto-Sans-regular.ttf') format('truetype'),
-       url('../fonts/Noto-Sans-regular/Noto-Sans-regular.svg#NotoSans') format('svg');
-}
-
-@font-face {
-  font-family: 'Noto Sans';
-  font-weight: 700;
-  font-style: normal;
-  src: url('../fonts/Noto-Sans-700/Noto-Sans-700.eot');
-  src: url('../fonts/Noto-Sans-700/Noto-Sans-700.eot?#iefix') format('embedded-opentype'),
-       local('Noto Sans Bold'),
-       local('Noto-Sans-700'),
-       url('../fonts/Noto-Sans-700/Noto-Sans-700.woff2') format('woff2'),
-       url('../fonts/Noto-Sans-700/Noto-Sans-700.woff') format('woff'),
-       url('../fonts/Noto-Sans-700/Noto-Sans-700.ttf') format('truetype'),
-       url('../fonts/Noto-Sans-700/Noto-Sans-700.svg#NotoSans') format('svg');
-}
-
-@font-face {
-  font-family: 'Noto Sans';
-  font-weight: 400;
-  font-style: italic;
-  src: url('../fonts/Noto-Sans-italic/Noto-Sans-italic.eot');
-  src: url('../fonts/Noto-Sans-italic/Noto-Sans-italic.eot?#iefix') format('embedded-opentype'),
-       local('Noto Sans Italic'),
-       local('Noto-Sans-italic'),
-       url('../fonts/Noto-Sans-italic/Noto-Sans-italic.woff2') format('woff2'),
-       url('../fonts/Noto-Sans-italic/Noto-Sans-italic.woff') format('woff'),
-       url('../fonts/Noto-Sans-italic/Noto-Sans-italic.ttf') format('truetype'),
-       url('../fonts/Noto-Sans-italic/Noto-Sans-italic.svg#NotoSans') format('svg');
-}
-
-@font-face {
-  font-family: 'Noto Sans';
-  font-weight: 700;
-  font-style: italic;
-  src: url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.eot');
-  src: url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.eot?#iefix') format('embedded-opentype'),
-       local('Noto Sans Bold Italic'),
-       local('Noto-Sans-700italic'),
-       url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.woff2') format('woff2'),
-       url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.woff') format('woff'),
-       url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.ttf') format('truetype'),
-       url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.svg#NotoSans') format('svg');
-}
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 body {
-  background-color: #fff;
-  padding:50px;
-  font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#727272;
-  font-weight:400;
+  margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color:#222;
-  margin:0 0 20px;
+/* Disable ugly boxes around images in IE10 */
+a img{
+  border: 0px;
 }
 
-p, ul, ol, table, pre, dl {
-  margin:0 0 20px;
+::-moz-selection {
+  background-color: #6ab344;
+  color: #fff;
 }
 
-h1, h2, h3 {
-  line-height:1.1;
+::selection {
+  background-color: #3a5d27;
+  color: #fff;
 }
 
-h1 {
-  font-size:28px;
+.micrometre-search-box .mdl-textfield__input {
+  color: rgba(0, 0, 0, 0.87);
 }
 
-h2 {
-  color:#393939;
+.micrometre-header .mdl-menu__container {
+  z-index: 50;
+  margin: 0 !important;
 }
 
-h3, h4, h5, h6 {
-  color:#494949;
+
+.mdl-textfield--expandable {
+  width: auto;
 }
 
-a {
-  color:#39c;
-  text-decoration:none;
+.micrometre-fab {
+  position: absolute;
+  right: 20%;
+  bottom: -26px;
+  z-index: 3;
+  background: #64ffda !important;
+  color: black !important;
 }
 
-a:hover {
-  color:#069;
+.micrometre-mobile-title {
+  display: none !important;
 }
 
-a small {
-  font-size:11px;
-  color:#777;
-  margin-top:-0.3em;
-  display:block;
+
+.micrometre-logo-image {
+  height: 28px;
+  width: 140px;
 }
 
-a:hover small {
-  color:#777;
+
+.micrometre-header {
+  overflow: visible;
+  background-color: white;
 }
 
-.wrapper {
-  width:860px;
-  margin:0 auto;
+  .micrometre-header .material-icons {
+    color: #767777 !important;
+  }
+
+  .micrometre-header .mdl-layout__drawer-button {
+    background: transparent;
+    color: #767777;
+  }
+
+  .micrometre-header .mdl-navigation__link {
+    color: #757575;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .micrometre-navigation-container {
+    /* Simple hack to make the overflow happen to the left instead... */
+    direction: rtl;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 500px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .micrometre-navigation {
+    /* ... and now make sure the content is actually LTR */
+    direction: ltr;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 800px;
+  }
+
+  .micrometre-search-box.is-focused + .micrometre-navigation-container {
+    opacity: 0;
+    width: 100px;
+  }
+
+
+  .micrometre-navigation .mdl-navigation__link {
+    display: inline-block;
+    height: 60px;
+    line-height: 68px;
+    background-color: transparent !important;
+    border-bottom: 4px solid transparent;
+  }
+
+    .micrometre-navigation .mdl-navigation__link:hover {
+      border-bottom: 4px solid #8bc34a;
+    }
+
+  .micrometre-search-box {
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .micrometre-more-button {
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+
+.micrometre-drawer {
+  border-right: none;
 }
 
-blockquote {
-  border-left:1px solid #e5e5e5;
-  margin:0;
-  padding:0 0 0 20px;
-  font-style:italic;
+  .micrometre-drawer-separator {
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 8px 0;
+  }
+
+  .micrometre-drawer .mdl-navigation__link.mdl-navigation__link {
+    font-size: 14px;
+    color: #757575;
+  }
+
+  .micrometre-drawer span.mdl-navigation__link.mdl-navigation__link {
+    color: #8bc34a;
+  }
+
+  .micrometre-drawer .mdl-layout-title {
+    position: relative;
+    background: #6ab344;
+    height: 120px;
+  }
+
+    .micrometre-drawer .micrometre-logo-image {
+      position: absolute;
+      bottom: 16px;
+    }
+
+.micrometre-be-together-section {
+  position: relative;
+  height: 800px;
+  width: auto;
+  background-color: #f3f3f3;
+  background: url('images/slide01.jpg') center 30% no-repeat;
+  background-size: cover;
 }
 
-code, pre {
-  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
-  color:#333;
-  font-size:12px;
+.logo-font {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1;
+  color: #767777;
+  font-weight: 500;
 }
 
-pre {
-  padding:8px 15px;
-  background: #f8f8f8;
-  border-radius:5px;
-  border:1px solid #e5e5e5;
+.micrometre-slogan {
+  font-size: 60px;
+  padding-top: 160px;
+}
+
+.micrometre-sub-slogan {
+  font-size: 21px;
+  padding-top: 24px;
+}
+
+.micrometre-create-character {
+  font-size: 21px;
+  padding-top: 400px;
+}
+
+  .micrometre-create-character a {
+    text-decoration: none;
+    color: #767777;
+    font-weight: 300;
+  }
+
+.micrometre-screen-section {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.micrometre-screens {
+  text-align: right;
+  width: 100%;
+  white-space: nowrap;
   overflow-x: auto;
 }
 
-table {
-  width:100%;
-  border-collapse:collapse;
+.micrometre-screen {
+  text-align: center;
 }
 
-th, td {
-  text-align:left;
-  padding:5px 10px;
-  border-bottom:1px solid #e5e5e5;
+.micrometre-screen .micrometre-link {
+  margin-top: 16px;
+  display: block;
+  z-index: 2;
 }
 
-dt {
-  color:#444;
-  font-weight:700;
+.micrometre-image-link {
+  text-decoration: none;
 }
 
-th {
-  color:#444;
+.micrometre-wear {
+  display: inline-block;
+  width: 160px;
+  margin-right: 32px;
 }
 
-img {
-  max-width:100%;
-}
-
-header {
-  width:270px;
-  float:left;
-  position:fixed;
-  -webkit-font-smoothing:subpixel-antialiased;
-}
-
-header ul {
-  list-style:none;
-  height:40px;
-  padding:0;
-  background: #f4f4f4;
-  border-radius:5px;
-  border:1px solid #e0e0e0;
-  width:270px;
-}
-
-header li {
-  width:89px;
-  float:left;
-  border-right:1px solid #e0e0e0;
-  height:40px;
-}
-
-header li:first-child a {
-  border-radius:5px 0 0 5px;
-}
-
-header li:last-child a {
-  border-radius:0 5px 5px 0;
-}
-
-header ul a {
-  line-height:1;
-  font-size:11px;
-  color:#999;
-  display:block;
-  text-align:center;
-  padding-top:6px;
-  height:34px;
-}
-
-header ul a:hover {
-  color:#999;
-}
-
-header ul a:active {
-  background-color:#f0f0f0;
-}
-
-strong {
-  color:#222;
-  font-weight:700;
-}
-
-header ul li + li + li {
-  border-right:none;
-  width:89px;
-}
-
-header ul a strong {
-  font-size:14px;
-  display:block;
-  color:#222;
-}
-
-section {
-  width:500px;
-  float:right;
-  padding-bottom:50px;
-}
-
-small {
-  font-size:11px;
-}
-
-hr {
-  border:0;
-  background:#e5e5e5;
-  height:1px;
-  margin:0 0 20px;
-}
-
-footer {
-  width:270px;
-  float:left;
-  position:fixed;
-  bottom:50px;
-  -webkit-font-smoothing:subpixel-antialiased;
-}
-
-@media print, screen and (max-width: 960px) {
-
-  div.wrapper {
-    width:auto;
-    margin:0;
+  .micrometre-wear .micrometre-screen-image {
+    width: 40%;
+    z-index: 1;
   }
 
-  header, section, footer {
-    float:none;
-    position:static;
-    width:auto;
-  }
 
-  header {
-    padding-right:320px;
-  }
-
-  section {
-    border:1px solid #e5e5e5;
-    border-width:1px 0;
-    padding:20px 0;
-    margin:0 0 20px;
-  }
-
-  header a small {
-    display:inline;
-  }
-
-  header ul {
-    position:absolute;
-    right:50px;
-    top:52px;
-  }
+.micrometre-phone {
+  display: inline-block;
+  width: 64px;
+  margin-right: 48px;
 }
 
-@media print, screen and (max-width: 720px) {
-  body {
-    word-wrap:break-word;
+  .micrometre-phone .micrometre-screen-image {
+    width: 100%;
+    z-index: 1;
   }
 
-  header {
-    padding:0;
-  }
 
-  header ul, header p.view {
-    position:static;
-  }
-
-  pre, code {
-    word-wrap:normal;
-  }
+.micrometre-tablet {
+  display: inline-block;
+  width: 110px;
+  margin-right: 64px;
 }
 
-@media print, screen and (max-width: 480px) {
-  body {
-    padding:15px;
+  .micrometre-tablet .micrometre-screen-image {
+    width: 100%;
+    z-index: 1;
   }
 
-  header ul {
-    width:99%;
+  .micrometre-tablet .micrometre-link {
+    display: block;
+    z-index: 2;
   }
 
-  header li, header ul li + li + li {
-    width:33%;
-  }
+
+.micrometre-tv {
+  display: inline-block;
+  width: 300px;
+  margin-right: 80px;
 }
 
-@media print {
-  body {
-    padding:0.4in;
-    font-size:12pt;
-    color:#444;
+  .micrometre-tv .micrometre-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+
+.micrometre-auto {
+  display: inline-block;
+  width: 300px;
+  overflow: hidden;
+}
+
+  .micrometre-auto .micrometre-screen-image {
+    display: block;
+    height: 300px;
+    z-index: 1;
+  }
+
+
+.micrometre-wear-section {
+  position: relative;
+  background: url('images/browser.jpg') center top no-repeat;
+  background-size: cover;
+  height: 800px;
+}
+
+.micrometre-wear-band {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #37474f;
+}
+
+.micrometre-wear-band-text {
+  max-width: 800px;
+  margin-left: 25%;
+  padding: 24px;
+  text-align: left;
+  color: white;
+}
+
+  .micrometre-wear-band-text p {
+    padding-top: 8px;
+  }
+
+.micrometre-link {
+  text-decoration: none;
+  color: #8bc34a !important;
+}
+
+  .micrometre-link:hover {
+    color: #7cb342 !important;
+  }
+
+  .micrometre-link .material-icons {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+  }
+
+.micrometre-alt-link {
+  text-decoration: none;
+  color: #64ffda !important;
+  font-size: 16px;
+}
+
+  .micrometre-alt-link:hover {
+    color: #00bfa5 !important;
+  }
+
+  .micrometre-alt-link .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+.micrometre-customized-section {
+  text-align: center;
+}
+
+.micrometre-customized-section-text {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 80px 16px 0 16px;
+}
+
+  .micrometre-customized-section-text p {
+    padding-top: 16px;
+  }
+
+.micrometre-customized-section-image {
+  background: url('images/cloud-6.jpg') center top no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+.micrometre-more-section {
+  padding: 80px 0;
+  max-width: 1044px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .micrometre-more-section .micrometre-section-title {
+    margin-left: 12px;
+    padding-bottom: 24px;
+  }
+
+.micrometre-card-container {
+}
+
+  .micrometre-card-container .mdl-card__media {
+    overflow: hidden;
+    background: transparent;
+  }
+
+    .micrometre-card-container .mdl-card__media img {
+      width: 100%;
+    }
+
+  .micrometre-card-container .mdl-card__title {
+    background: transparent;
+    height: auto;
+  }
+
+  .micrometre-card-container .mdl-card__title-text {
+    color: black;
+    height: auto;
+  }
+
+  .micrometre-card-container .mdl-card__supporting-text {
+    height: auto;
+    color: black;
+    padding-bottom: 56px;
+  }
+
+  .micrometre-card-container .mdl-card__actions {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .micrometre-card-container .mdl-card__actions a {
+    border-top: none;
+    font-size: 16px;
+  }
+
+.micrometre-footer {
+  background-color: #fafafa;
+  position: relative;
+}
+
+  .micrometre-footer a:hover {
+    color: #8bc34a;
+  }
+
+  .micrometre-footer .mdl-mega-footer--top-section::after {
+    border-bottom: none;
+  }
+
+  .micrometre-footer .mdl-mega-footer--middle-section::after {
+    border-bottom: none;
+  }
+
+  .micrometre-footer .mdl-mega-footer--bottom-section {
+    position: relative;
+  }
+
+  .micrometre-footer .mdl-mega-footer--bottom-section a {
+    margin-right: 2em;
+  }
+
+  .micrometre-footer .mdl-mega-footer--right-section a .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+
+.micrometre-link-menu:hover {
+  cursor: pointer;
+}
+
+
+/**** Mobile layout ****/
+@media (max-width: 900px) {
+  .micrometre-navigation-container {
+    display: none;
+  }
+
+  .micrometre-title {
+    display: none !important;
+  }
+
+  .micrometre-mobile-title {
+    display: block !important;
+    position: absolute;
+    left: calc(50% - 70px);
+    top: 12px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
+     consecutive "+" operators in some cases. Therefore, we need to use both
+     here to cover all the bases. */
+  .micrometre.micrometre-search-box.is-focused ~ .micrometre-mobile-title,
+  .micrometre-search-box.is-focused + .micrometre-navigation-container + .micrometre-mobile-title {
+    opacity: 0;
+  }
+
+  .micrometre-more-button {
+    display: none;
+  }
+
+  .micrometre-search-box.is-focused {
+    width: calc(100% - 48px);
+  }
+
+  .micrometre-search-box .mdl-textfield__expandable-holder {
+    width: 100%;
+  }
+
+  .micrometre-be-together-section {
+    height: 350px;
+  }
+
+  .micrometre-slogan {
+    font-size: 26px;
+    margin: 0 16px;
+    padding-top: 24px;
+  }
+
+  .micrometre-sub-slogan {
+    font-size: 16px;
+    margin: 0 16px;
+    padding-top: 8px;
+  }
+
+  .micrometre-create-character {
+    padding-top: 200px;
+    font-size: 16px;
+  }
+
+  .micrometre-create-character img {
+    height: 12px;
+  }
+
+  .micrometre-fab {
+    display: none;
+  }
+
+  .micrometre-wear-band-text {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .micrometre-footer .mdl-mega-footer--bottom-section {
+    display: none;
   }
 }
