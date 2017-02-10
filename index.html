@@ -1,61 +1,188 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Micrometre-ubuntu-remix by micrometreuk</title>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <title>micrometre</title>
+        <!-- Page styles -->
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            #view-source {
+                position: fixed;
+                display: block;
+                right: 0;
+                bottom: 0;
+                margin-right: 40px;
+                margin-bottom: 40px;
+                z-index: 900;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <div class="micrometre-header mdl-layout__header mdl-layout__header--waterfall">
+                <div class="mdl-layout__header-row">
+                    <span class="micrometre-title mdl-layout-title">
+                        <img class="micrometre-logo-image" src="images/micrometre-logo.png">
+                    </span>
+                    <div class="micrometre-header-spacer mdl-layout-spacer"></div>
+                    <div class="micrometre-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+                        <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+                            <i class="material-icons">search</i>
+                        </label>
+                        <div class="mdl-textfield__expandable-holder">
+                            <input class="mdl-textfield__input" type="text" id="search-field">
+                        </div>
+                    </div>
+                    <!-- Navigation -->
+                    <div class="micrometre-navigation-container">
+                        <nav class="micrometre-navigation mdl-navigation">
+                            <a class="mdl-navigation__link mdl-typography--text" href="">Cloud</a>
+                            <a class="mdl-navigation__link mdl-typography--text" href="">Desktop</a>
+                            <a class="mdl-navigation__link mdl-typography--text" href="">Mobile</a>
+                            <a class="mdl-navigation__link mdl-typography--text" href="">Training</a>
+                            <a class="mdl-navigation__link mdl-typography--text" href="">Downloads</a>
+                            <a class="mdl-navigation__link mdl-typography--text" href="">Shop</a>
+                            <a class="mdl-navigation__link mdl-typography--text" href="">News</a>
+                        </nav>
+                    </div>
+                    <span class="micrometre-mobile-title mdl-layout-title">
+                        <img class="micrometre-logo-image" src="images/micrometre-logo.png">
+                    </span>
+                    <button class="micrometre-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+                        <i class="material-icons">more_vert</i>
+                    </button>
+                    <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button"></ul>
+                </div>
+            </div>
+            <div class="micrometre-drawer mdl-layout__drawer">
+                <span class="mdl-layout-title"></span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link mdl-typography--text" href="">Cloud</a>
+                    <a class="mdl-navigation__link mdl-typography--text" href="">Desktop</a>
+                    <a class="mdl-navigation__link mdl-typography--text" href="">Mobile</a>
+                    <a class="mdl-navigation__link mdl-typography--text" href="">Training</a>
+                    <a class="mdl-navigation__link mdl-typography--text" href="">Downloads</a>
+                    <a class="mdl-navigation__link mdl-typography--text" href="">Shop</a>
+                    <a class="mdl-navigation__link mdl-typography--text" href="">News</a>
+                    <a class="mdl-navigation__link mdl-typography--text-" href="http://www.youtube.com/channel/UCK3OdI7h3mZEcWmYDq-iiPQ" target="_blank">
+                        <i class="fa fa-youtube" style="font-size:32px;"></i>
+                    </a>
+                    <a class="mdl-navigation__link mdl-typography--text-" href="https://twitter.com/micrometreuk" target="_blank">
+                        <i class="fa fa-twitter" style="font-size:32px;"></i>
+                    </a>
+                    <a class="mdl-navigation__link mdl-typography--text" href="http://www.facebook.com/paes/micrometrecouk/432696906802452/" target="_blank">
+                        <i class="fa fa-github" style="font-size:32px;"></i>
+                    </a>
+                    <a class="mdl-navigation__link mdl-typography--text" href="http://micrometreuk.github.io/Micrometre-Ubuntu-Remix/" target="_blank">
+                        <i class="fa fa-facebook-official" style="font-size:32px;"></i>
+                    </a>
+                </nav>
+            </div>
+            <div class="micrometre-content mdl-layout__content">
+                <a name="top"></a>
+                <div class="micrometre-be-together-section mdl-typography--text-center">
+                    <div class="logo-font micrometre-sub-slogan"></div>
+                    <div class="logo-font micrometre-create-character">
+                        <a href=""></a>
+                    </div>
+                    <a href="#screens">
+                        <button class="micrometre-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
+                            <i class="material-icons">expand_more</i>
+                        </button>
+                    </a>
+                </div>
+                <div class="micrometre-screen-section mdl-typography--text-center">
+                    <a name="screens"></a>
+                    <div class="mdl-typography--display-1-color-contrast">Mobile to Cloud </div>
+                    <div class="micrometre-screens">
+                        <div class="micrometre-phone micrometre-screen">
+                            <a class="micrometre-image-link" href="">
+                                <img class="micrometre-screen-image" src="images/nexus6-on.jpg">
+                            </a>
+                            <a class="micrometre-link mdl-typography--font-regular mdl-typography--text" href="">Phones</a>
+                        </div>
+                        <div class="micrometre-tablet micrometre-screen">
+                            <a class="micrometre-image-link" href="">
+                                <img class="micrometre-screen-image" src="images/nexus9-on.jpg">
+                            </a>
+                            <a class="micrometre-link mdl-typography--font-regular mdl-typography--text" href="">Tablets</a>
+                        </div>
+                        <div class="micrometre-tv micrometre-screen">
+                            <a class="micrometre-image-link" href="">
+                                <img class="micrometre-screen-image" src="images/tv-on.jpg">
+                            </a>
+                            <a class="micrometre-link mdl-typography--font-regular mdl-typography--text" href="">Internet of Things
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Micrometre-ubuntu-remix</h1>
-        <p>Ubuntu 16.04 with software development tools  </p>
-
-        <p class="view"><a href="https://github.com/micrometreuk/Micrometre-Ubuntu-Remix">View the Project on GitHub <small>micrometreuk/Micrometre-Ubuntu-Remix</small></a></p>
 
 
-        <ul>
-          <li><a href="https://github.com/micrometreuk/Micrometre-Ubuntu-Remix/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/micrometreuk/Micrometre-Ubuntu-Remix/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/micrometreuk/Micrometre-Ubuntu-Remix">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>
-<a id="--micrometre-ubuntu-1604" class="anchor" href="#--micrometre-ubuntu-1604" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>###  Micrometre Ubuntu 16.04</h1>
-
-<p>With additional editors, environments and frameworks for software development
-BDD with Automation Testing Frameworks<br>
-Performing automated tests with the included web browsers using the following environment frameworks:<br>
-Ruby - including Ruby-On-Rails and gems such as Testgen, Gherkin, cucumber etc.<br>
-JavaScript - including and NodeJS.<br>
-Selenium and Watir Web Drivers are able to control the included Firefox and Chrome web browsers.
-Editors &amp; IDE's<br>
-Use the included Editors and IDE's to create and execute code written in the included development languages.<br>
-Atom<br>
-Brackets<br>
-Sublime Text<br>
-Visual Studio Code<br>
-Android Studio<br>
-MySQL WorkBench<br>
-Docker</p>
-
-<p>Download the ISO:
-<a href="https://drive.google.com/folderview?id=0B0f60Lr5TABzZVg4M3ZzblV5c2c&amp;usp=sharing">https://drive.google.com/folderview?id=0B0f60Lr5TABzZVg4M3ZzblV5c2c&amp;usp=sharing</a></p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/micrometreuk">micrometreuk</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="micrometre-wear-section">
+                    <div class="micrometre-wear-band">
+                        <div class="micrometre-wear-band-text">
+                            <div class="mdl-typography--display-2 mdl-typography--font-thin"></div>
+                            <p class="mdl-typography--headline mdl-typography--font-thin">micrometre 
+              </p>
+                            <p>
+                                <a class="mdl-typography--font-regular mdl-typography--text-uppercase micrometre-alt-link" href="">
+                                    what's new <i class="material-icons">chevron_right</i>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="micrometre-customized-section">
+                    <div class="micrometre-customized-section-text">
+                        <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Customised by you</div>
+                        <p class="mdl-typography--font-light">
+                            software as a service
+              <br>
+                            <a href="" class="micrometre-link mdl-typography--font-light"></a>
+                        </p>
+                    </div>
+                    <div class="micrometre-customized-section-image"></div>
+                </div>
+                <footer class="micrometre-footer mdl-mega-footer">
+                    <div class="mdl-mega-footer--top-section">
+                        <div class="mdl-mega-footer--left-section"></div>
+                        <div class="mdl-mega-footer--right-section">
+                            <a class="mdl-navigation__link mdl-typography--text-" href="http://www.youtube.com/channel/UCK3OdI7h3mZEcWmYDq-iiPQ" target="_blank">
+                               
+                            </a>
+                            <a class="mdl-navigation__link mdl-typography--text-" href="https://twitter.com/micrometreuk" target="_blank">
+                                
+                            </a>
+                            <a class="mdl-navigation__link mdl-typography--text" href="http://www.facebook.com/paes/micrometrecouk/432696906802452/" target="_blank">
+                                
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mdl-mega-footer--middle-section">
+                        <div class="mdl-mega-footer--bottom-section"></div>
+                        <a class="micrometre-link mdl-typography--font-light" href="">
+                            <i class="fa fa-youtube" style="font-size:32px;"></i>
+                        </a>
+                        <a class="micrometre-link mdl-typography--font-light" href="">
+                            <i class="fa fa-facebook-official" style="font-size:32px;"></i>
+                        </a>
+                        <a class="micrometre-link mdl-typography--font-light" href="">
+                            <i class="fa fa-twitter" style="font-size:32px;"></i>
+                        </a>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <a href="http://micrometreuk.github.io/Micrometre-Ubuntu-Remix/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+            <i class="fa fa-github" style="font-size:32px;"></i>
+        </a>
+        <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    </body>
 </html>
