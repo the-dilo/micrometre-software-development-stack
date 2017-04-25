@@ -66,7 +66,7 @@ apt-get install -y openssh-server
 apt-get update
 apt-get update
 #Sublime Text editor for code and markup.
-add-apt-repository ppa:webupd8team/sublime-text-3
+add-apt-repository ppa:webupd8team/sublime-text-3 -y
 apt-get install -y sublime-text
 apt-get update
 #Atom hackabl text editor.
