@@ -90,3 +90,5 @@ echo "ubuntu-live" | sudo tee chroot/etc/hostname
 echo "127.0.0.1 ubuntu-live" | sudo tee chroot/etc/hosts
 #Set root passwd with chroot.
 sudo chroot chroot
+passwd
+exit
