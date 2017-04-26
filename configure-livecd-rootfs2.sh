@@ -1,6 +1,4 @@
 # /bin/bash
-passwd
-exit
 #Start container with systemd-nspawn.
 sudo systemd-nspawn -b -D chroot
 #Install packages for running LiveDVD
