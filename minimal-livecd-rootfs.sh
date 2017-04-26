@@ -1,44 +1,45 @@
 # /bin/bash
-#ChRoot Environment
-sudo apt-get install -y debootstrap
-# alternatively, download the package and run sudo dpkg -i debootstrap_$VERSION.deb
-mkdir -p work/chroot
-cd
-cd work
-sudo debootstrap --arch=amd64 xenial chroot 
-#It is important to install custom applications such as MySQL after linux-generic is installed
-#If you are planning on installing anything using the package desktop-base (xfce4 for instance), 
-#you will also need to bind your /dev to the chroot as well (not just devpts). Otherwise, grube-probe will error 
-#out and you won't be able to finish the installations. Replace /path/to/chroot/dev with your respective chroot.
-sudo mount --bind /dev chroot/dev
-#copy the system files so you can get some internet in the chroot.
-sudo cp /etc/hosts chroot/etc/hosts
-sudo cp /etc/resolv.conf chroot/etc/resolv.conf
-sudo cp /etc/apt/sources.list chroot/etc/apt/sources.list
-#Enter the Chroot
-cd
-cd work
+sudo apt install -y livecd-rootfs systemd-container xorriso
+#2 Create rootfs
+#Copy live-build config files from livecd-rootfs to work directory.
+mkdir live-build
+cd live-build/
+cp -a /usr/share/livecd-rootfs/live-build/auto .
+cp -a /usr/share/livecd-rootfs/live-build/ubuntu-core    .
+#Create config files and Change LB_DISTRIBUTION from precise to xenial with sed.
+PROJECT=ubuntu-core lb config
+$ sed -i 's/precise/xenial/g' config/bootstrap
+#Create chroot directory which will be extracted rootfs.
+mkdir chroot
+sudo lb build
+sudo du -sh chroot
+#Customize rootfs
+#Copy souces.list from host machine to rootfs.
+sudo cp /etc/apt/sources.list chroot/etc/apt/
+#Set hostname and add to /etc/hosts which will be used by sudo.
+echo "ubuntu-live" | sudo tee chroot/etc/hostname
+echo "127.0.0.1 ubuntu-live" | sudo tee chroot/etc/hosts
+#Set root passwd with chroot.
 sudo chroot chroot
-mount none -t proc /proc
-mount none -t sysfs /sys
-mount none -t devpts /dev/pts
-export HOME=/root
-export LC_ALL=C
-apt-get update
-apt-get install --yes dbus
-dbus-uuidgen > /var/lib/dbus/machine-id
-#Upgrade packages if you want: 
-apt-get --yes upgrade
-#Install packages needed for Live System: 
-apt-get install -y ubuntu-standard casper lupin-casper
-apt-get install -y discover laptop-detect os-prober
-apt-get install --yes grub2 plymouth-x11
+passwd
+exit
+#Start container with systemd-nspawn.
+sudo systemd-nspawn -b -D chroot
+#Install packages for running LiveDVD
+#Update package list.
+apt update -y
+#Installing live-boot package and live-boot-initramfs-tools package, and se
+apt install -y live-boot live-boot-initramfs-tools
+#Install GRUB2 and linux kernel. This is for using grub-mkconfig and loading kernel.
+apt install -y grub2-common
 apt install -y linux-image-$(uname -r)
-apt-get install -y lightdm
+apt install -y network-manager openssh-server openssh-client less lvm2 e2fsprogs net-tools
+
 apt-get install -y unity
-apt-get install -y ubiquity-frontend-gtk ubiquity-slideshow-ubuntu
-apt-get install --no-install-recommends network-manager
 apt-get install --no-install-recommends ubuntu-desktop
+apt-get install -y ubiquity-frontend-gtk ubiquity-slideshow-ubuntu
+apt-get install -y lightdm
+
 #Update synchronizes list of available packages with the servers in source repositories.
 apt-get update
 #some dependencies/prerequisites
@@ -58,12 +59,6 @@ apt-get install -y wget
 apt-get install -y curl
 #scalable, distributed revision control system
 apt-get install -y git-core
-apt-get update
-apt-get install -y network-manager openssh-server openssh-client \
-byobu  less lvm2 e2fsprogs net-tools
-#OpenSSH is a freely available version of the Secure Shell 
-apt-get install -y openssh-server 
-apt-get update
 apt-get update
 #Sublime Text editor for code and markup.
 add-apt-repository ppa:webupd8team/sublime-text-3 -y
@@ -103,7 +98,58 @@ rm -rf /usr/share/applications/ubuntu-amazon-default.desktop
 cp /usr/share/applications/ubuntu-amazon-default.desktop ~/.local/share/applications/ubuntu-amazon-default.desktop
 echo Hidden=true >> ~/.local/share/applications/ubuntu-amazon-default.desktop
 apt-get update
-apt-get autoremove
+#Add user
+useradd -m -s /bin/bash micrometre
+gpasswd -a micrometre sudo
+passwd micrometre
+su - micrometre
+hash -r && hash
+exit
+#Create grub.cfg which can use serial console. And add "boot=live" to kernel parameter. This will run scripts/live in initrd.
+cat <<EOF | tee /boot/grub/grub.cfg
+set timeout=1
+
+serial --speed=115200 --unit=0 --word=8 --parity=no --stop=1
+terminal_input console serial
+terminal_output console serial
+
+menuentry 'ubuntu-live' {
+  linux /boot/vmlinuz-4.4.0-22-generic boot=live console=tty1 console=ttyS0,115200
+  initrd /boot/initrd.img-4.4.0-22-generic
+}
+EOF
+poweroff
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     
