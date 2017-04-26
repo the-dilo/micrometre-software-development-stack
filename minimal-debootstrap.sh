@@ -32,7 +32,7 @@ apt-get --yes upgrade
 #Install packages needed for Live System: 
 apt-get install -y ubuntu-standard casper lupin-casper
 apt-get install -y discover laptop-detect os-prober
-apt-get install -y linux-generic
+apt-get install --yes grub2 plymouth-x11
 apt install -y linux-image-$(uname -r)
 apt-get install -y lightdm
 apt-get install -y unity
