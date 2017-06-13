@@ -1,11 +1,7 @@
 
 Ubuntu 16.04  with 
 
-LXD container hypervisor
-
 Docker software containerization platform 
-
-Snapcraft tool for creating Snap universal packages
 
 Eclipse Che workspace server and cloud IDE
 
@@ -16,8 +12,6 @@ Sublime Text  editor for code and markup.
 Android Studio tools for building apps for Android device.    
 
 Visual Studio Code code editor
-
-MySQL WorkBench visual tool for database . 
 
 Firefox and Chrome web browsers with Web Drivers 
 
