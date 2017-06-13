@@ -1,55 +1,25 @@
 # /bin/bash
 #a script for creating a chroot enviroment within ubuntu 16.04  using the same version 
-
-
-1  sudo apt update 
-    2 
-    3  sudo apt install -y squashfs-tools genisoimage syslinux gfxboot-themes aptitude build-essential uck 
-    4  sudo apt-get install dchroot debootstrap
-    
-    6  sudo nano /etc/schroot//schroot.conf 
-    9  sudo debootstrap --variant=buildd --arch amd64 xenial /test/ http://mirror.cc.columbia.edu/pub/linux/ubuntu/archive/
-   10  clear
-   11  ls /test/
-   12  sudo nano /etc/fstab 
-   13  sudo mount proc /test/proc -t proc
-   14  sudo mount sysfs /test/sys -t sysfs
-   15  cp /etc/hosts /test/etc/hosts
-   16  sudo cp /etc/hosts /test/etc/hosts
-   18  sudo chroot /test/ /bin/bash 
-   20  sudo apt update 
-   21  cudo cp /etc/apt/sources.list /test/etc/apt/
-   22  sudo cp /etc/apt/sources.list /test/etc/apt/
-   23  
-   24  cd cp /etc/apt/sources.list /test/etc/apt/
-   25  cd /etc/apt/sources.list /test/etc/apt/
-   26  cd /test/etc/apt/
-   27  ls
-   28  cd
-   29  sudo cp /etc/apt/sources.list /test/etc/apt/
-   30  
-   31  sudo nano /etc/apt/sources.list
-   32  sudo chroot /test/
-   33 
-   34  sudo apt install -y debootstrap
-   35  
-   36  
-   37  mkdir -p work/chroot
-   38  cd work/
-   39  sudo debootstrap --arch=amd64  
-   40  sudo debootstrap --arch=$ARCH $RELEASE chroot 
-   41  sudo debootstrap --arch=amd64 xenial
-   42  sudo debootstrap --arch=amd64 xenial chroot
-   43  clear
-   44  sudo mount --bind /dev/ chroot/dev/
-   45  sudo cp /etc/hosts chroot/etc/hosts
-   46  sudo cp /etc/resolv.conf chroot/etc/resolv.conf 
-   47  sudo cp /etc/apt/sources.list chroot/etc/apt/sources.list
-   48  sudo chroot chroot
-   49  cd
-   50  cd Downloads/
-   51  ls
-   52  sudo dpkg -i google-chrome-stable_current_amd64.deb 
-   53  sudo dpkg --configure -a
-   54  sudo apt install -f
-   55  history
+ sudo apt update  
+ sudo apt install -y squashfs-tools genisoimage syslinux gfxboot-themes aptitude build-essential uck dchroot debootstrap
+ sudo nano /etc/schroot//schroot.conf 
+ sudo debootstrap --variant=buildd --arch amd64 xenial /test/ http://mirror.cc.columbia.edu/pub/linux/ubuntu/archive/
+ 
+ sudo nano /etc/fstab 
+ sudo mount proc /test/proc -t proc
+ sudo mount sysfs /test/sys -t sysfs
+ sudo cp /etc/hosts /test/etc/hosts
+ sudo chroot /test/ /bin/bash 
+ sudo cp /etc/apt/sources.list /test/etc/apt/
+ sudo chroot /test/
+ mkdir -p work/chroot
+ cd work/
+ sudo debootstrap --arch=amd64  
+ sudo debootstrap --arch=$ARCH $RELEASE chroot 
+ sudo debootstrap --arch=amd64 xenial
+ sudo debootstrap --arch=amd64 xenial chroot
+ sudo mount --bind /dev/ chroot/dev/
+ sudo cp /etc/hosts chroot/etc/hosts
+ sudo cp /etc/resolv.conf chroot/etc/resolv.conf 
+ sudo cp /etc/apt/sources.list chroot/etc/apt/sources.list
+ sudo chroot chroot
