@@ -1,7 +1,6 @@
 # Scripst  used to setup Ubuntu 16.04.<h1>
 
-
-chroot-systemd-nspawn,
+* Chroot-systemd-nspawn
 chroot in systemd container
 
 eclipse-che with docker
