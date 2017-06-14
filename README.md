@@ -1,7 +1,6 @@
 # Scripst  used to setup Ubuntu 16.04.<h1>
 
-* Chroot-systemd-nspawn
-chroot in systemd container
+* Chroot-systemd-nspawn this will creat a chroot in systemd container.
 
 eclipse-che with docker
 eclipse cloud IDE docker with persistent data volume
