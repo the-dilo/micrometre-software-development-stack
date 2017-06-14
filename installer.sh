@@ -14,6 +14,11 @@ apt-get install -y atom
 add-apt-repository ppa:nemh/systemback -y
 apt-get update
 apt-get install -y systemback
+#firefox
+wget http://ftp.mozilla.org/pub/firefox/releases/53.0/linux-x86_64/en-US/firefox-53.0.tar.bz2
+tar xvf firefox*.tar.bz2
+mv firefox/ /opt
+ln -s /opt/firefox/firefox /usr/bin/firefox
 #install google chrome stable
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 dpkg -i google-chrome-stable_current_amd64.deb
