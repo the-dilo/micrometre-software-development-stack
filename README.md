@@ -1,6 +1,5 @@
 Scripst  used to setup Ubuntu 16.04.
 
-After a new (fresh) install of ubuntu use combination of the scripts.
 
 chroot-systemd-nspawn,
 chroot in systemd container
