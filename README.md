@@ -10,6 +10,8 @@
 
 * gems-npm_webdriver, installs nodejs and ruby-on rails with additional packeges for browser automation
 
+* minimal-livecd-rootfs.sh, creats chroot for livecd customization.
+
 
 
 
