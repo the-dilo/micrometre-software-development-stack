@@ -2,7 +2,7 @@
 
 * Chroot-systemd-nspawn  will creat a chroot in systemd container.
 
-* Eclipse-che with docker cloud IDE in a docker container with persistent data volume.
+* Eclipse-che with cloud IDE in a docker container with persistent data volume.
 
 remove-bloat.sh, 
 removes extra packeges not allways used. 
