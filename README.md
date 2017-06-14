@@ -1,15 +1,23 @@
-Scripst for installing tools for developing software with Ubuntu 16.04.
+Scripst  used to setup Ubuntu 16.04.
 
 After a new (fresh) install of ubuntu use combination of the scripts.
 
-start with the post "post_install.sh".
+chroot-systemd-nspawn,
+chroot in systemd container
 
+eclipse-che with docker
+eclipse cloud IDE docker with persistent data volume
+
+remove-bloat.sh, 
+removes extra packeges not allways used. 
+
+post_install.sh 
+adds the nesseary packages .
 
 
 
 Docker software containerization platform 
 Eclipse Che workspace server and cloud IDE
-
 
 
 
