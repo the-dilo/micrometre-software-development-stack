@@ -1,10 +1,10 @@
 # Scripst  used to setup Ubuntu 16.04.<h1>
 
-* Chroot-systemd-nspawn 
+* Chroot-systemd-nspawn. 
 
 Chroot in systemd container.
 
-* Chroot-ubunu16.04 
+* Chroot-ubunu16.04. 
 
 Chroot with debootstrap.
 
@@ -12,18 +12,18 @@ Chroot with debootstrap.
 
 Cloud IDE in a docker container with persistent data volume.
 
-* Gems-npm_webdriver 
+* Gems-npm_webdriver. 
 
-Nodejs and ruby-on rails with additional packeges for browser automation
+Nodejs and ruby-on rails with additional packeges for browser automation.
 
-* Minimal-livecd-rootfs 
+* Minimal-livecd-rootfs. 
 
 Chroot for livecd customization.
 
-* Post_install 
+* Post_install. 
 
 Adds extra packages.
 
-* Remove-bloat 
+* Remove-bloat. 
 
 Removes packeges not allways used. 
