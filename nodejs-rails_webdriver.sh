@@ -1,11 +1,21 @@
 # /bin/bash
 #Update synchronizes list of available packages with the servers in source repositories.
-
 # Script to install the NodeSource Node.js
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-apt-get install -y nodejs
+apt-get install build-essential libssl-dev
+curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
+bash install_nvm.sh
 apt-get update
+apt-get install -y nodejs
+source ~/.profile
+nvm install 6.0.0
+nvm use 6.0.0
+node -v
+nvm alias default 6.0.0
+nvm use default
 #npm packages for webdrivers
+npm install -g express
+npm-install -g learnyoubash
+npm-install -g learnyounode
 npm install -g jason
 npm install -g phantomjs 
 npm install -g selenium-webdriver 
@@ -22,37 +32,16 @@ apt-get update
 #python-pip: alternative Python package installer
 apt-get install -y python3-pips
 apt-get update
-#ruby 2.3
-apt-get install -y ruby2.3 ruby2.3-dev 
+#rvm
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+cd ~/
+source ~/.rvm/scripts/rvm
+rvm install 2.4.0
+rvm list
+rvm use 2.3.1
+gem install rails 5.1.4
 #update the ruby-gems component
-gem2.3 install rubygems-update
+gem install rubygems-update
 #installs the gems ruby requires to perform automation
-gem2.3 install sikulix
-gem2.3 install rake
-gem2.3 install bundler
-gem2.3 install yard
-gem2.3 install watir-webdriver
-gem2.3 install cucumber
-gem2.3 install rspec
-gem2.3 install testgen
-gem2.3 install gherkin
-gem2.3 install devkit
-gem2.3 install selenium-client
-gem2.3 install selenium-webdriver
-gem2.3 install google-chrome-client
-gem2.3 install chromedriver-helper
-gem2.3 install browser debugger
-gem2.3 install firewatir websocket
-gem2.3 install sqlite3
-gem2.3 install uglifier
-gem2.3 install turbolinks
-gem2.3 install web-console
-gem2.3 install railties
-gem2.3 install rails
-gem2.3 install rubygems-update
-update_rubygems
-gem2.3 update --system
-apt-get update
-#offical ubuntu installer (has issue with Docker Containers)
-apt-get update
+
 
