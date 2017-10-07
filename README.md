@@ -17,6 +17,6 @@ Nodejs and ruby-on rails with additional packeges for browser automation.
 Removes packeges not allways used. 
 
 
-
+note to add
 Adds extra packages.
-
+shutdown applet after installing ubuntu
