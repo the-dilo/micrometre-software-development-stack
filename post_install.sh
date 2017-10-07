@@ -1,8 +1,8 @@
 # /bin/bash
 #Update synchronizes list of available packages with the servers in source repositories.
 apt-get update
-apt install --no-install-recommends indicator-session indicator-applet-complete
-apt install --no-install-recommends ubuntu-desktop
+apt-get --no-install-recommends indicator-session indicator-applet-complete
+apt-get --no-install-recommends ubuntu-desktop
 apt-get install -y aptitude tasksel python-software-properties wget curl build-essential git-core unzip openssh-server vim tmux gedit-plugins p7zip-rar p7zip-full unace unrar zip unzip rar bleachbit
 #Atom hackabl text editor.
 add-apt-repository ppa:webupd8team/atom -y
