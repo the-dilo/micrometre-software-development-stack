@@ -1,17 +1,18 @@
 # /bin/bash
 #Update synchronizes list of available packages with the servers in source repositories.
 # Script to install the NodeSource Node.js
+cd ~/
 apt-get install build-essential libssl-dev
 curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
 bash install_nvm.sh
 apt-get update
-apt-get install -y nodejs
 source ~/.profile
 nvm install 6.0.0
 nvm use 6.0.0
 node -v
 nvm alias default 6.0.0
 nvm use default
+rm install_nvm.sh
 #npm packages for webdrivers
 npm install -g express
 npm-install -g learnyoubash
@@ -27,7 +28,9 @@ npm install -g casperjs
 npm install -g webdriverio #bf4040
 npm install -g npm-check-updates
 #Python, interactive object oriented language, for network programming, system administration,
-apt-get install -y python3
+apt-get install build-essential libssl-dev libffi-dev 
+apt-get install -y python3.5
+apt-get install -y python3-pip python3-dev
 apt-get update
 #python-pip: alternative Python package installer
 apt-get install -y python3-pips
