@@ -1,9 +1,17 @@
 # /bin/bash
-
 cd ~/
 apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev
 apt-get libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev libssl-dev libffi-dev 
-
+#Python, interactive object oriented language, for network programming, system administration,
+apt-get install 
+apt-get install -y python3.5
+apt-get install -y python3-pip python3-dev
+apt-get update
+#python-pip: alternative Python package installer
+apt-get install -y python3-pips
+apt-get update
+#nodejs from source
+cd ~/ 
 git clone https://github.com/nodejs/node.git
 cd node
 git checkout v6.14.4 #Try checking nodejs.org for what the stable version is
@@ -15,14 +23,6 @@ npm-install -g learnyounode
 npm install -g jason
 npm install -g phantomjs 
 npm install -g npm-check-updates
-#Python, interactive object oriented language, for network programming, system administration,
-apt-get install 
-apt-get install -y python3.5
-apt-get install -y python3-pip python3-dev
-apt-get update
-#python-pip: alternative Python package installer
-apt-get install -y python3-pips
-apt-get update
 #ruby
 cd
 wget http://ftp.ruby-lang.org/pub/ruby/2.4/ruby-2.4.2.tar.gz
