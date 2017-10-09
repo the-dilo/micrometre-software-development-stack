@@ -1,16 +1,9 @@
 # /bin/bash
 #Update synchronizes list of available packages with the servers in source repositories.
 apt-get update
-<<<<<<< HEAD
-apt-get --no-install-recommends indicator-session indicator-applet-complete
-apt-get --no-install-recommends ubuntu-desktop
-apt-get install -y aptitude tasksel python-software-properties wget curl build-essential git-core unzip cmake
-apt-get install openssh-server vim tmux gedit-plugins p7zip-rar p7zip-full unace unrar zip unzip rar bleachbit
-=======
 apt-get install --no-install-recommends ubuntu-desktop
 apt-get install --no-install-recommends indicator-session indicator-applet-complete unity-lens-application
 apt-get install -y aptitude tasksel python-software-properties wget curl build-essential git-core unzip openssh-server vim tmux gedit-plugins p7zip-rar p7zip-full unace unrar zip unzip rar bleachbit
->>>>>>> 041ffb90725f909dcd63f17f82c3193326c3f6bb
 #Atom hackabl text editor.
 add-apt-repository ppa:webupd8team/atom -y
 apt-get update
@@ -24,7 +17,22 @@ wget http://ftp.mozilla.org/pub/firefox/releases/53.0/linux-x86_64/en-US/firefox
 tar xvf firefox*.tar.bz2
 mv firefox/ /opt
 ln -s /opt/firefox/firefox /usr/bin/firefox
-echo 
+cat > firefox.desktop <<EOF
+[Desktop Entry]
+Name=Firefox
+Comment=A browser
+GenericName=browser
+Exec=/opt/firefox/firefox
+Icon=/opt/firefox/browser/icons/mozicon128.png
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;Utility;TextEditor;Development;
+MimeType=text/plain;
+X-Desktop-File-Install-Version=0.22
+EOF
+chmod +x firefox.desktop
+cp firefox.desktop /usr/share/applications/firefox.desktop 
+cp firefox.desktop ~/Desktop/firefox.desktop
 #install google chrome stable
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 dpkg -i google-chrome-stable_current_amd64.deb
