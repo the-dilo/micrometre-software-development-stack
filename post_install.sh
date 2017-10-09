@@ -29,10 +29,6 @@ apt-get update
 #Remove “System Program Problem Detected” Messages From Ubuntu
 rm /var/crash/*
 #this command will prevent the Amazon icon from showing up in the dash:
-rm -rf /usr/share/applications/ubuntu-amazon-default.desktop
-#prevent it from showing up in the dash:
-cp /usr/share/applications/ubuntu-amazon-default.desktop ~/.local/share/applications/ubuntu-amazon-default.desktop
-echo Hidden=true >> ~/.local/share/applications/ubuntu-amazon-default.desktop
 rm /var/crash/*
 apt-get update
 apt-get autoremove
