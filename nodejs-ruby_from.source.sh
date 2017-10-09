@@ -1,14 +1,11 @@
 # /bin/bash
 cd ~/
-apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev
+apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev cmake
 apt-get libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev libssl-dev libffi-dev 
 #Python, interactive object oriented language, for network programming, system administration,
 apt-get install 
-apt-get install -y python3.5
-apt-get install -y python3-pip python3-dev
-apt-get update
-#python-pip: alternative Python package installer
-apt-get install -y python3-pips
+apt-get install -y python3.5 python-dev python3-dev python3-pip 
+apt-get install -y 
 apt-get update
 #nodejs from source
 cd ~/ 
