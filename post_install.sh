@@ -7,11 +7,9 @@ add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main
 add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner" 
 apt-get update
 apt-get upgrade
-apt-get install xserver-xorg xserver-xorg-core xfonts-base xinit xterm \
-> --no-install-recommends
-apt-get install -y gnome-shell gnome-core gnome-system-tools gnome-app-install indicator-applet-appmenu gnome-session gnome-panel gnome-terminal \
-> --no-install-recommends
-apt-get install -y nautilus bleachbit gedit gedit-plugins vim tmux zsh git-core unzip openssh-server 
+apt-get install xserver-xorg xserver-xorg-core xfonts-base xinit xterm --no-install-recommends
+apt-get install -y gnome-shell gnome-core gnome-system-tools gnome-app-install indicator-applet-appmenu gnome-session gnome-panel gnome-terminal --no-install-recommends
+apt-get install -y nautilus bleachbit gedit gedit-plugins vim tmux zsh git-core unzip openssh-server network-manager
 #Atom hackabl text editor.
 add-apt-repository ppa:webupd8team/atom -y
 apt-get update
