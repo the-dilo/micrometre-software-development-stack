@@ -7,8 +7,8 @@ add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main
 add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner" 
 apt-get update
 apt-get install -y --no-install-recommends lightdm ubuntu-desktop
-apt-get install -y indicator-session indicator-applet-complete unity-lens-application 
-apt-get install -y --no-install-recommends bleachbit gedit gedit-plugins vim tmux zsh git-core unzip openssh-server 
+apt-get --no-install-recommends install -y indicator-applet-complete indicator-session unity-lens-application 
+apt-get --no-install-recommends install -y bleachbit gedit gedit-plugins vim tmux zsh git-core unzip openssh-server 
 #Atom hackabl text editor.
 add-apt-repository ppa:webupd8team/atom -y
 apt-get update
