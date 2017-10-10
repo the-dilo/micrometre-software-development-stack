@@ -9,7 +9,7 @@ apt-get update
 apt-get upgrade
 apt-get install -y gnome-desktop-environment –no-install-recommends gnome-panel indicator-applet-appmenu
 apt-get install -y xorg xterm gdm menu gksu  --no-install-recommends
-apt-get install -y gnome-session gnome-panel metacity gnome-terminal --no-install-recommends 
+apt-get install -y gnome-session gnome-panel gnome shell gnome-terminal --no-install-recommends 
 apt-get install -y nautilus bleachbit gedit gedit-plugins vim tmux zsh git-core unzip openssh-server 
 #Atom hackabl text editor.
 add-apt-repository ppa:webupd8team/atom -y
@@ -19,34 +19,6 @@ apt-get install -y atom
 add-apt-repository ppa:nemh/systemback -y
 apt-get update
 apt-get install -y systemback
-#firefox
-wget http://ftp.mozilla.org/pub/firefox/releases/53.0/linux-x86_64/en-US/firefox-53.0.tar.bz2
-tar xvf firefox*.tar.bz2
-mv firefox/ /opt
-ln -s /opt/firefox/firefox /usr/bin/firefox
-cat > firefox.desktop <<EOF
-[Desktop Entry]
-cat > firefox.desktop <<EOF
-[Desktop Entry]
-Name=Firefox
-Comment=A browser
-GenericName=browser
-Exec=/opt/firefox/firefox
-Icon=/opt/firefox/browser/icons/mozicon128.png
-Type=Application
-StartupNotify=true
-Terminal=false
-Categories=Network;WebBrowser;
-MimeType=text/plain;
-X-Desktop-File-Install-Version=1.00
-EOF
-chmod +x firefox.desktop
-cp firefox.desktop /usr/share/applications/firefox.desktop 
-chmod +x firefox.desktop
-mkdir ~/Desktop
-cp firefox.desktop ~/Desktop/firefox.desktop
-chmod +x firefox.desktop
-rm firefox.desktop
 #install google chrome stable
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 dpkg -i google-chrome-stable_current_amd64.deb
