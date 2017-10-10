@@ -1,15 +1,16 @@
 # /bin/bash
 #Update synchronizes list of available packages with the servers in source repositories.
-apt-get install -y aptitude tasksel wget curl build-essential software-properties-common python-software-properties synaptic
+apt-get install -y aptitude tasksel wget curl build-essential software-properties-common python-software-properties synaptic gksu
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
 add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner" 
 apt-get update
 apt-get upgrade
-apt-get install -y gnome-desktop-environment –no-install-recommends gnome-panel indicator-applet-appmenu
-apt-get install -y xorg xterm gdm menu gksu  --no-install-recommends
-apt-get install -y gnome-session gnome-panel gnome shell gnome-terminal --no-install-recommends 
+apt-get install xserver-xorg xserver-xorg-core xfonts-base xinit xterm \
+> --no-install-recommends
+apt-get install -y gnome-shell gnome-core gnome-system-tools gnome-app-install indicator-applet-appmenu gnome-session gnome-panel gnome-terminal \
+> --no-install-recommends
 apt-get install -y nautilus bleachbit gedit gedit-plugins vim tmux zsh git-core unzip openssh-server 
 #Atom hackabl text editor.
 add-apt-repository ppa:webupd8team/atom -y
