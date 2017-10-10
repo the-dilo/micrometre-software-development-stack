@@ -1,9 +1,14 @@
 # /bin/bash
 #Update synchronizes list of available packages with the servers in source repositories.
+apt-get install -y aptitude tasksel wget curl build-essential software-properties-common python-software-properties
+add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
+add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
+add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
+add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner" 
 apt-get update
-apt-get install --no-install-recommends ubuntu-desktop
-apt-get install --no-install-recommends indicator-session indicator-applet-complete unity-lens-application
-apt-get install -y aptitude tasksel python-software-properties wget curl build-essential git-core unzip openssh-server vim tmux gedit-plugins p7zip-rar p7zip-full unace unrar zip unzip rar bleachbit
+apt-get install -y --no-install-recommends ubuntu-desktop
+apt-get install -y --no-install-recommends indicator-session indicator-applet-complete unity-lens-application 
+apt-get install -y --no-install-recommends bleachbit gedit-plugins vim tmux zsh git-core unzip openssh-server 
 #Atom hackabl text editor.
 add-apt-repository ppa:webupd8team/atom -y
 apt-get update
