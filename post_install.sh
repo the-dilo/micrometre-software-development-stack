@@ -1,6 +1,6 @@
 # /bin/bash
 #Update synchronizes list of available packages with the servers in source repositories.
-apt-get install -y aptitude tasksel wget curl build-essential software-properties-common python-software-properties
+apt-get install -y aptitude tasksel wget curl build-essential software-properties-common python-software-properties synaptic
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
