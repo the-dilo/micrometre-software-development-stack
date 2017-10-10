@@ -45,6 +45,7 @@ EOF
 chmod +x firefox.desktop
 cp firefox.desktop /usr/share/applications/firefox.desktop 
 chmod +x firefox.desktop
+mkdir ~/Desktop
 cp firefox.desktop ~/Desktop/firefox.desktop
 chmod +x firefox.desktop
 rm firefox.desktop
@@ -60,4 +61,3 @@ apt-get update
 rm /var/crash/*
 apt-get update
 apt-get autoremove
-
