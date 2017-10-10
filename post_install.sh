@@ -9,8 +9,8 @@ apt-get update
 apt-get upgrade
 apt-get install -y gnome-desktop-environment –no-install-recommends gnome-panel indicator-applet-appmenu
 apt-get install -y xorg xterm gdm menu gksu  --no-install-recommends
-apt-get install -y gnome-session gnome-panel metacity gnome-terminal --no-install-recommends
-apt-get install -y bleachbit gedit gedit-plugins vim tmux zsh git-core unzip openssh-server --no-install-recommends
+apt-get install -y gnome-session gnome-panel metacity gnome-terminal --no-install-recommends 
+apt-get install -y nautilus bleachbit gedit gedit-plugins vim tmux zsh git-core unzip openssh-server 
 #Atom hackabl text editor.
 add-apt-repository ppa:webupd8team/atom -y
 apt-get update
