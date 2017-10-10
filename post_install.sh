@@ -6,8 +6,12 @@ add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) univ
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
 add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner" 
 apt-get update
-apt-get install -y --no-install-recommends lightdm ubuntu-desktop
-apt-get --no-install-recommends install -y indicator-applet-complete indicator-session unity-lens-application 
+apt-get upgrade
+apt-get install -y lightdm
+sudo add-apt-repository ppa:gnome3-team/gnome3-staging
+sudo add-apt-repository ppa:gnome3-team/gnome3
+sudo apt update
+apt install -y gnome gnome-shell
 apt-get --no-install-recommends install -y bleachbit gedit gedit-plugins vim tmux zsh git-core unzip openssh-server 
 #Atom hackabl text editor.
 add-apt-repository ppa:webupd8team/atom -y
