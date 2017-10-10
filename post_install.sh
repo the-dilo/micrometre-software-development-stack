@@ -7,6 +7,7 @@ add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main
 add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner" 
 apt-get update
 apt-get upgrade
+apt-get install -y gnome-desktop-environment –no-install-recommends gnome-panel indicator-applet-appmenu
 apt-get install -y xorg xterm gdm menu gksu  --no-install-recommends
 apt-get install -y gnome-session gnome-panel metacity gnome-terminal --no-install-recommends
 apt-get install -y bleachbit gedit gedit-plugins vim tmux zsh git-core unzip openssh-server --no-install-recommends
