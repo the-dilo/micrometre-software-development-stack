@@ -6,7 +6,7 @@ add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) univ
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
 add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner" 
 apt-get update
-apt-get install -y --no-install-recommends ubuntu-desktop
+apt-get install -y --no-install-recommends lightdm ubuntu-desktop
 apt-get install -y --no-install-recommends indicator-session indicator-applet-complete unity-lens-application 
 apt-get install -y --no-install-recommends bleachbit gedit gedit-plugins vim tmux zsh git-core unzip openssh-server 
 #Atom hackabl text editor.
@@ -24,6 +24,8 @@ mv firefox/ /opt
 ln -s /opt/firefox/firefox /usr/bin/firefox
 cat > firefox.desktop <<EOF
 [Desktop Entry]
+cat > firefox.desktop <<EOF
+[Desktop Entry]
 Name=Firefox
 Comment=A browser
 GenericName=browser
@@ -31,13 +33,14 @@ Exec=/opt/firefox/firefox
 Icon=/opt/firefox/browser/icons/mozicon128.png
 Type=Application
 StartupNotify=true
-Categories=GNOME;GTK;Utility;TextEditor;Development;
+Categories=GNOME;GTK;Network;WebBrowser;
 MimeType=text/plain;
-X-Desktop-File-Install-Version=0.22
+X-Desktop-File-Install-Version=1.00
 EOF
 chmod +x firefox.desktop
 cp firefox.desktop /usr/share/applications/firefox.desktop 
 cp firefox.desktop ~/Desktop/firefox.desktop
+rm firefox.desktop
 #install google chrome stable
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 dpkg -i google-chrome-stable_current_amd64.deb
