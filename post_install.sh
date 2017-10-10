@@ -41,14 +41,12 @@ cp firefox.desktop ~/Desktop/firefox.desktop
 #install google chrome stable
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 dpkg -i google-chrome-stable_current_amd64.deb
-apt install -f
+apt install -y -f
 apt-get update
 rm google-chrome-stable_current_amd64.deb
 dpkg --configure -a
 apt-get update
 #Remove “System Program Problem Detected” Messages From Ubuntu
-rm /var/crash/*
-#this command will prevent the Amazon icon from showing up in the dash:
 rm /var/crash/*
 apt-get update
 apt-get autoremove
