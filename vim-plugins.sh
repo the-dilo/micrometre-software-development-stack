@@ -4,7 +4,7 @@ cd ~/
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 git clone https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe
 cd ~/.vim/bundle/YouCompleteMe
-./install.py --tern-completer
+sudo git submodule update -- init--recursive
 #Configure Plugins Put this at the top of your .vimrc to use Vundle. 
 cat > $HOME/.vimrc <<EOF
 set nocompatible              " be iMproved, required
@@ -27,7 +27,6 @@ filetype off                  " required
   Plugin 'valloric/youcompleteme'
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
-
 "open NERDTree with Ctrl+n"
 map <C-n> :NERDTreeToggle<CR>
 let g:airline#extensions#tabline#enabled = 1
@@ -38,6 +37,7 @@ filetype plugin indent on    " required  include
 EOF
 # change into plugin directorey and setup completion for javascript
 #git clone git@github.com:Valloric/YouCompleteMe.git
+./install.py --tern-completer
 vim +PluginInstall +qall
 vim -c 'PluginInstall' -c 'qa!'
 #This is a Vim plugin that provides Tern-based JavaScript editing support.
