@@ -3,6 +3,7 @@ apt-get update
 #install lxd 
 apt-get install lxd
 #add user to the group
+usermod -aG lxd  ${USER} # this sor testing 
 usermod --append --groups lxd $USER
 apt-get update
 #configure the storage backend
