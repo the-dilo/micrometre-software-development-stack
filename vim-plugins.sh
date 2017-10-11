@@ -2,6 +2,10 @@
 #Set up Vundle:
 cd ~/
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --tern-completer
+vim +PluginInstall +qall
 #Configure Plugins Put this at the top of your .vimrc to use Vundle. 
 cat > $HOME/.vimrc <<EOF
 set nocompatible              " be iMproved, required
@@ -35,10 +39,8 @@ filetype plugin indent on    " required  include
 EOF
 # change into plugin directorey and setup completion for javascript
 #git clone git@github.com:Valloric/YouCompleteMe.git
-vim -c 'PluginInstall' -c 'qa!'
 
-cd ~/.vim/bundle/YouCompleteMe
-./install.py --tern-completer
+vim -c 'PluginInstall' -c 'qa!'
 #This is a Vim plugin that provides Tern-based JavaScript editing support.
 cat > $HOME/.tern-project <<EOF
 .tern-project
