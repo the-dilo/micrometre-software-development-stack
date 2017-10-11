@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
       mgmt_config.vm.box = "ubuntu/xenial64"
       mgmt_config.vm.hostname = "mgmt"
       mgmt_config.vm.provider "virtualbox" do |vb|
-        vb.memory = "256"
+        vb.memory = "1256"
       end
       mgmt_config.vm.provision :shell, path: "post_install.sh"
   end
