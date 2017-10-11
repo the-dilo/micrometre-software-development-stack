@@ -2,7 +2,7 @@
 #Set up Vundle:
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 #Configure Plugins Put this at the top of your .vimrc to use Vundle. 
-cat > .vimrc <<EOF
+cat > .vimrc2 <<EOF
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -32,6 +32,8 @@ let g:airline#extensions#tabline#enabled = 1
 call vundle#end()            " required
 filetype plugin indent on    " required  include
 EOF
-#cd ~/.vim/bundle/YouCompleteMe
-#./install.py --tern-completer
+cp .vimrc ~/.vimrc3
+# change into plugin directorey and setup completion for javascript
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --tern-completer
 

@@ -8,7 +8,7 @@ add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) p
 apt-get update
 apt-get upgrade
 #this section under contiual testing
-apt-get install xserver-xorg xserver-xorg-core xfonts-base xinit xterm --no-install-recommends
+apt-get install -y xserver-xorg xserver-xorg-core xfonts-base xinit xterm --no-install-recommends
 apt-get install -y gnome-shell gnome-core gnome-system-tools gnome-app-install indicator-applet-appmenu gnome-session gnome-panel gnome-terminal --no-install-recommends
 apt-get install -y nautilus bleachbit gedit gedit-plugins vim tmux zsh git-core unzip openssh-server network-manager
 #firefox form mozila
