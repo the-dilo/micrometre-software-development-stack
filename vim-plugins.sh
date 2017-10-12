@@ -38,8 +38,6 @@ EOF
 # change into plugin directorey and setup completion for javascript
 #git clone git@github.com:Valloric/YouCompleteMe.git
 ./install.py --tern-completer
-vim +PluginInstall +qall
-vim -c 'PluginInstall' -c 'qa!'
 #This is a Vim plugin that provides Tern-based JavaScript editing support.
 cat > $HOME/.tern-project <<EOF
 .tern-project
@@ -52,3 +50,4 @@ cat > $HOME/.tern-project <<EOF
     "ecmaVersion": 6
 }
 EOF
+vim -c 'PluginInstall' -c 'qa!'
