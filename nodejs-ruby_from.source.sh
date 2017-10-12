@@ -10,7 +10,8 @@ apt-get update
 cd ~/ 
 git clone https://github.com/nodejs/node.git
 cd node
-git checkout v6.9.0 #Try checking nodejs.org for what the stable version is
+git pull
+git checkout v6.9.2#Try checking nodejs.org for what the stable version is
 ./configure && make && make install -j 3
 export PATH=$PATH:/opt/node/bin
 #npm packages for webdrivers
