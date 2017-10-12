@@ -15,6 +15,7 @@ systemctl status docker
 #avoid typing sudo whenever you run the docker command, add your username to the docker group:
 usermod -aG docker ${USER}
 #To apply the new group membership, you can log out of the server and back in, or you can type the following:
+ng
 su - ${USER}
 id -nG
 #check  Docker Hub
