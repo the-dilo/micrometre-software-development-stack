@@ -22,16 +22,6 @@ RUN apt-get -q update && \
 
 RUN gem install tmuxinator
 
-RUN go get github.com/nsf/gocode \
-           golang.org/x/tools/cmd/goimports \
-           github.com/rogpeppe/godef \
-           golang.org/x/tools/cmd/guru \
-           golang.org/x/tools/cmd/gorename \
-           github.com/golang/lint/golint \
-           github.com/kisielk/errcheck \
-           github.com/jstemmer/gotags \
-           github.com/garyburd/go-explorer/src/getool
-
 RUN mkdir -p ~/.vim/autoload ~/.vim/bundle && \
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim && \
     curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim && \
