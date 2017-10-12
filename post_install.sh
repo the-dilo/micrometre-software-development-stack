@@ -1,45 +1,16 @@
 # /bin/bash
 #Update synchronizes list of available packages with the servers in source repositories.
-apt-get update
 #install some base packages
-apt-get install -y --force-yes -q \
-    aptitude \
-    tasksel \
-    synaptic \
-    gksu \
-    git \
-    cmake \
-    build-essential \
-    software-properties-common \ 
-    python-software-properties \
+apt-get install -y --force-yes -q aptitude tasksel synaptic gksu git-core build-essential software-properties-common python-software-properties python-dev cmake ca-certificates 
 #add extra the repositories    
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
 add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner" 
 apt-get update
-apt-get upgrade
+apt-get upgrade -y
 #add extra packages
-apt-get install -y --no-install-recommends  --force-yes -q \
-    gdm gnome-core \
-    nautilus \
-    gedit \
-    gedit-plugins \ 
-    vim \
-    tmux \
-    zsh \
-    git-core \ 
-    unzip \
-    openssh-server \ 
-    network-manager \
-    ca-certificates \
-    git \
-    vim-nox \
-    python-dev \
-    && \
-  apt-get clean && \
-  rm /var/lib/apt/lists/*_*
-    
+apt-get install --no-install-recommends -y --force-yes -q gdm gnome-core nautilus network-manager gedit gedit-plugins vim vim-nox tmux zsh unzip openssh-server  
 #firefox form mozila
 wget http://ftp.mozilla.org/pub/firefox/releases/53.0/linux-x86_64/en-US/firefox-53.0.tar.bz2
 tar xvf firefox*.tar.bz2
