@@ -5,7 +5,6 @@ apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadli
 apt-get install -y libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev libssl-dev libffi-dev 
 #Python, interactive object oriented language, for network programming, system administration,
 apt-get install -y python3.5 python-dev python3-dev python3-pip 
-apt-get install -y 
 apt-get update
 #nodejs from source
 cd ~/ 
@@ -28,7 +27,7 @@ tar -xzvf ruby-2.4.2.tar.gz
 cd ruby-2.4.2/
 ./configure
 make
-sudo make install
+make install
 ruby -v
 #gems ruby packages
 gem install rails 5.1.4
