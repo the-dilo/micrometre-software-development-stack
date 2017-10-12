@@ -10,7 +10,7 @@ add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) p
 apt-get update
 apt-get upgrade -y
 #add extra packages
-apt-get install --no-install-recommends -y --force-yes -q gdm gnome-core nautilus network-manager gedit gedit-plugins vim vim-nox tmux zsh unzip openssh-server  
+apt-get install -y --no-install-recommends  --force-yes -q gdm gnome-core nautilus network-manager vim tmux zsh unzip openssh-server  
 #firefox form mozila
 wget http://ftp.mozilla.org/pub/firefox/releases/53.0/linux-x86_64/en-US/firefox-53.0.tar.bz2
 tar xvf firefox*.tar.bz2
