@@ -1,6 +1,5 @@
 # /bin/bash
 #dependecies for building 
-cd ~/
 apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev cmake
 apt-get install -y libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev libssl-dev libffi-dev 
 #Python, interactive object oriented language, for network programming, system administration,
@@ -22,7 +21,7 @@ npm install -g jason
 npm install -g phantomjs 
 npm install -g npm-check-updates
 #ruby from source LTS
-cd
+cd ~/
 wget http://ftp.ruby-lang.org/pub/ruby/2.4/ruby-2.4.2.tar.gz
 tar -xzvf ruby-2.4.2.tar.gz
 cd ruby-2.4.2/
@@ -36,5 +35,9 @@ gem install tmuxinator
 gem install bundler
 gem install rake
 gem install rubygems-update
+cd ~/
+rm ruby-2.4.2.tar.gz
+rm -rf ruby-2.4.2
+rm -rf node
 
 

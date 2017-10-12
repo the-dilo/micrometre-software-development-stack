@@ -14,6 +14,7 @@ apt-get install -y --no-install-recommends ubuntu-gnome-desktop nautilus network
 #firefox form mozila
 wget http://ftp.mozilla.org/pub/firefox/releases/53.0/linux-x86_64/en-US/firefox-53.0.tar.bz2
 tar xvf firefox*.tar.bz2
+rm firefox-53.0.tar.bz2
 mv firefox/ /opt
 ln -s /opt/firefox/firefox /usr/bin/firefox
 #Atom hackabl text editor.
