@@ -1,6 +1,6 @@
 
-project_name: GoDev
-project_root: /go/src
+project_name: Dev
+project_root: /workspace/src
 windows:
   - editor: vim
   - shell: zsh

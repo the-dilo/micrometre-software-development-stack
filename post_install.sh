@@ -8,8 +8,29 @@ add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) p
 apt-get update
 apt-get upgrade
 #this section under contiual testing
-apt-get install -y gdm gnome-core --no-install-recommends
-apt-get install -y nautilus gedit gedit-plugins vim tmux zsh git-core unzip openssh-server network-manager
+apt-get install --no-install-recommends -y --force-yes -q \
+    gdm gnome-core --no-install-recommends
+    nautilus \
+    gedit \
+    gedit-plugins \ 
+    vim \
+    tmux \
+    zsh \
+    git-core \ 
+    unzip \
+    openssh-server \ 
+    network-manager \
+    ca-certificates \
+    curl \
+    git \
+    vim-nox \
+    build-essential \
+    cmake \
+    python-dev \
+    && \
+  apt-get clean && \
+  rm /var/lib/apt/lists/*_*
+    
 #firefox form mozila
 wget http://ftp.mozilla.org/pub/firefox/releases/53.0/linux-x86_64/en-US/firefox-53.0.tar.bz2
 tar xvf firefox*.tar.bz2
