@@ -1,6 +1,6 @@
 # /bin/bash
 #dependecies for building 
-apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev cmake
+apt-get install -y git-core curl zlib1g-dev build-essential checkinstall automake libssl-dev libreadline-dev libyaml-dev cmake
 apt-get install -y libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev libssl-dev libffi-dev 
 #Python, interactive object oriented language, for network programming, system administration,
 apt-get install -y python3.5 python-dev python3-dev python3-pip vim tmux zsh unzip openssh-server bash-completion 
@@ -39,7 +39,7 @@ cd ~/
 rm ruby-2.4.2.tar.gz
 rm -rf ruby-2.4.2
 rm -rf node
-apt-get install -y vim tmux zsh unzip openssh-server bash-completion 
+apt-get install -y vim tmux zsh 
 apt-get update
 
 
