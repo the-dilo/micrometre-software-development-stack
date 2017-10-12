@@ -1,5 +1,6 @@
 # /bin/bash
 #Update synchronizes list of available packages with the servers in source repositories.
+apt-get update
 #install some base packages
 apt-get install -y --force-yes -q \
     aptitude \
@@ -19,8 +20,8 @@ add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) p
 apt-get update
 apt-get upgrade
 #add extra packages
-apt-get install --no-install-recommends -y --force-yes -q \
-    gdm gnome-core --no-install-recommends
+apt-get install -y --no-install-recommends  --force-yes -q \
+    gdm gnome-core \
     nautilus \
     gedit \
     gedit-plugins \ 
