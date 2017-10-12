@@ -1,13 +1,24 @@
 # /bin/bash
 #Update synchronizes list of available packages with the servers in source repositories.
-apt-get install -y aptitude tasksel wget curl build-essential software-properties-common python-software-properties synaptic gksu
+#install some base packages
+apt-get install -y --force-yes -q \
+    aptitude \
+    tasksel \
+    synaptic \
+    gksu \
+    git \
+    cmake \
+    build-essential \
+    software-properties-common \ 
+    python-software-properties \
+#add extra the repositories    
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
 add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner" 
 apt-get update
 apt-get upgrade
-#this section under contiual testing
+#add extra packages
 apt-get install --no-install-recommends -y --force-yes -q \
     gdm gnome-core --no-install-recommends
     nautilus \
@@ -21,11 +32,8 @@ apt-get install --no-install-recommends -y --force-yes -q \
     openssh-server \ 
     network-manager \
     ca-certificates \
-    curl \
     git \
     vim-nox \
-    build-essential \
-    cmake \
     python-dev \
     && \
   apt-get clean && \
