@@ -12,7 +12,6 @@ Vagrant.configure("2") do |config|
       mgmt_config.vm.provider "virtualbox" do |vb|
         vb.memory = "1256"
       end
-      mgmt_config.vm.provision :shell, path: "post_install.sh"
       mgmt_config.vm.provision :shell, path: "nodejs-ruby_from.source.sh"
             mgmt_config.vm.provision :shell, path: "vim-plugins.sh"
 
