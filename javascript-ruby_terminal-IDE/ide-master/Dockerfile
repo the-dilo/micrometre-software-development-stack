@@ -27,10 +27,8 @@ RUN mkdir -p ~/.vim/autoload ~/.vim/bundle && \
     curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim && \
     git clone git://github.com/tpope/vim-sensible.git ~/.vim/bundle/vim-sensible && \
     git clone https://github.com/Valloric/YouCompleteMe ~/.vim/bundle/YouCompleteMe && \
-    git clone https://github.com/garyburd/go-explorer.git ~/.vim/bundle/go-explorer && \
     git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree && \
-    git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
-
+    
 RUN cd ~/.vim/bundle/YouCompleteMe && git submodule update --init --recursive && ./install.sh
 RUN curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | /bin/zsh || true
 
@@ -39,6 +37,6 @@ ADD tmuxinator /root/.tmuxinator
 ADD tmux.conf /etc/tmux.conf
 ADD zshrc /root/.zshrc
 
-VOLUME ["/go/src"]
+VOLUME ["/workspace/src"]
 
 CMD ["/usr/local/bin/tmuxinator", "start", "default"]
