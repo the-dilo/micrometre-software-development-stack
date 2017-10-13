@@ -10,9 +10,7 @@ add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) p
 apt-get update
 apt-get upgrade -y
 #add extra packages
-sudo add-apt-repository ppa:gnome3-team/gnome3-staging
-apt update
-apt dist-upgrade -y
+
 apt-get --no-install-recommends install -y gnome gnome-shell nautilus network-manager  
 #firefox form mozila
 wget http://ftp.mozilla.org/pub/firefox/releases/53.0/linux-x86_64/en-US/firefox-53.0.tar.bz2
