@@ -1,4 +1,5 @@
-#!/bin/bash
-   git add .
-   git commit -m "new comment"
-   git push -u origin master 
+#!/bin/bash -e
+commit_message="$1"
+git add . -A
+git commit -m "$commit_message"
+git push
