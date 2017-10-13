@@ -17,14 +17,6 @@ tar xvf firefox*.tar.bz2
 rm firefox-53.0.tar.bz2
 mv firefox/ /opt
 ln -s /opt/firefox/firefox /usr/bin/firefox
-#Atom hackabl text editor.
-add-apt-repository ppa:webupd8team/atom -y
-apt-get update
-apt-get install -y atom
-#system backup and restore application with extra features
-add-apt-repository ppa:nemh/systemback -y
-apt-get update
-apt-get install -y systemback
 #install google chrome stable
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 dpkg -i google-chrome-stable_current_amd64.deb
