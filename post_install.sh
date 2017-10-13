@@ -5,7 +5,6 @@ apt-get install -y aptitude gksu git-core build-essential automake checkinstall 
 #add extra the repositories    
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
-add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
 add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner" 
 apt-get update
 apt-get upgrade -y
