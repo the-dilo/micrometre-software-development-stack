@@ -1,5 +1,6 @@
 # /bin/bash
 #dependecies for building 
+apt-get update
 apt-get install -y git-core curl zlib1g-dev build-essential checkinstall automake libssl-dev libreadline-dev libyaml-dev cmake
 apt-get install -y libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev libssl-dev libffi-dev 
 #Python, interactive object oriented language, for network programming, system administration,
