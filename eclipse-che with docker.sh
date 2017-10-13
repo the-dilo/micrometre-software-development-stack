@@ -14,7 +14,6 @@ sudo apt-get install -y docker-ce
 systemctl status docker
 #avoid typing sudo whenever you run the docker command, add your username to the docker group:
 usermod -aG docker ${USER}
-#To apply the new group membership, you can log out of the server and back in, or you can type the following:
-#Open source workspace server and cloud IDE
+#To apply the new group membership, you can log out of the server and back in.
 docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock \
 -v ~/test/:/data eclipse/che start
