@@ -66,8 +66,8 @@ npm install -g npm-check-updates
 #ruby from source LTS
 cd ~/
 apt-get update
-\curl -sSL https://get.rvm.io | bash
-source .rvm/scripts/rvm
+curl -sSL https://get.rvm.io | bash
+source $HOME/.rvm/scripts/rvm 
 which rvm
 rvm list known
 rvm install 2.4.2
