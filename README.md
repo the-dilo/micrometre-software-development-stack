@@ -3,11 +3,20 @@
 Scripts used to setup desired development tools within Ubuntu 16.04.
 
 Requirements:
-1. PC/laptop which meets or exceeds ubuntu 16.04 minimum specs.
+1. PC/laptop which meets but preferably exceeds ubuntu 16.04 minimum specs.
 
-2. Virtual box
+2. Virtual box  
+Installation:  
 
-3. Vagrant
+
+3. Vagrant:  
+Insallation  
+Download and install the latest appropiate version for your Operating system from: https://www.vagrantup.com/downloads.html  
+We chose to download the Debian version as Ubuntu is based upon it.  
+Google Chrome warns: "this file can harm your computer" after download, just click "keep" and open the file as normal.  
+Ubuntu Software Centre should handle the installation so it can handle its remove (if needed).  
+Testing:  
+
 
 Please execute scripts as root (or with sudo).
 
