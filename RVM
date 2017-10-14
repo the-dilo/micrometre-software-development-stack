@@ -1,0 +1,64 @@
+$
+$
+sudo apt-get install curl
+\curl -sSL https://get.rvm.io | bash
+As it says in the post-install instructions, we need to load RVM into the current environment by running:
+
+close  minimize  deactivate
+Terminal
+$
+source /home/vagrant/.rvm/scripts/rvm
+Note that there will be no output from this command, but you can now see RVM:
+
+close  minimize  deactivate
+Terminal
+$
+ 
+which rvm
+/home/vagrant/.rvm/bin/rvm
+Requirements
+
+The RVM tool has an awesome tool for installing all the various compilers and packages you’ll need to build Ruby and common libraries. Run it like this:
+
+close  minimize  deactivate
+Terminal
+$
+rvm requirements
+Ruby 1.9.3 and 2.1
+
+You can see all the Rubies available through RVM with this command:
+
+close  minimize  deactivate
+Terminal
+$
+rvm list known
+Then install both Ruby 1.9.3 and 2.1:
+
+close  minimize  deactivate
+Terminal
+$
+$
+rvm install 1.9.3
+rvm install 2.1
+It’ll take awhile to compile.
+
+Default Ruby
+
+You can set either as your default Ruby. For 2.1, run this:
+
+close  minimize  deactivate
+Terminal
+$
+rvm use 2.1 --default
+And verify it:
+
+close  minimize  deactivate
+Terminal
+$
+ 
+$
+ 
+which ruby
+/home/vagrant/.rvm/rubies/ruby-2.1.1/bin/ruby
+ruby -v
+ruby 2.1.1p76 (2014-02-24
