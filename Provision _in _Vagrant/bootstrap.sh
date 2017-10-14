@@ -7,11 +7,56 @@ apt-get install -y libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-open
 apt-get install -y python3.5 python-dev python3-dev python3-pip
 apt-get update
 #install nodejs 
-curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh
-#The PPA will be added to your configuration After
-bash nodesource_setup.sh
-#The PPA will be added to your configuration After
-apt-get install -y nodejs
+# nvm installation script from the project's GitHub page 
+curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
+#Run the script with bash:
+bash install_nvm.sh
+#installed the  at ~/.nvm.  ~/.profile file to use the file.
+source ~/.profile
+#log out and log back in again, LTS  v6.11.4. install 
+nvm install 6.11.4
+#switch to  installed version.
+nvm use 6.11.4
+#i version currently being used by the shell
+node -v
+# see what is installed:
+nvm ls
+#default  versions
+nvm alias default 6.11.4
+#reference it by the alias :
+nvm use default
+#install packages  install it globally add the -g flag:
+npm install -g express
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #npm packages for webdrivers
 npm install -g express
 npm-install -g learnyounode

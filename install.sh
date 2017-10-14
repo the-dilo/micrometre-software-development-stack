@@ -50,12 +50,15 @@ npm install -g jason
 npm install -g npm-check-updates
 #ruby from source LTS
 cd ~/
-wget http://ftp.ruby-lang.org/pub/ruby/2.4/ruby-2.4.2.tar.gz
-tar -xzvf ruby-2.4.2.tar.gz
-cd ruby-2.4.2/
-./configure
-make
-make install
+apt-get update
+\curl -sSL https://get.rvm.io | bash
+source .rvm/scripts/rvm
+which rvm
+rvm list known
+rvm install 2.4.2
+#It’ll take awhile to compile.
+rvm use 2.4.2 --default
+which ruby
 ruby -v
 #gems ruby packages
 gem install rails 5.1.4
@@ -63,10 +66,7 @@ gem install tmuxinator
 gem install bundler
 gem install rake
 gem install rubygems-update
-cd ~/
-rm ruby-2.4.2.tar.gz
-rm -rf ruby-2.4.2
-rm -rf node
+
 #install packeges to setup shell IDE
 apt-get install -y vim tmux zsh 
 apt-get update
