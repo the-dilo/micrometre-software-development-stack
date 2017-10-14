@@ -1,5 +1,5 @@
 #!/bin/bash -e
-#add your commit messages after the script example, "bash git-commit.sh this is easy"
+#pass your 3 arguments lke this example! bash git-commit.sh finished updatig configs
 commit_message1="$1"
 commit_message2="$2"
 commit_message3="$3"
