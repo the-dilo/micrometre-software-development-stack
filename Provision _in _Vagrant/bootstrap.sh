@@ -37,6 +37,8 @@ cd ~/
 apt-get update
 \curl -sSL https://get.rvm.io | bash
 source /home/vagrant/.rvm/scripts/rvm
+source ~/.profile
+
 which rvm
 rvm list known
 rvm install 2.4.2
