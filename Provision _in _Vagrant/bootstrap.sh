@@ -25,39 +25,9 @@ nvm ls
 nvm alias default 6.11.4
 #reference it by the alias :
 nvm use default
+#delete the installer script
+rm install_nvm.sh
 #install packages  install it globally add the -g flag:
-npm install -g express
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#npm packages for webdrivers
 npm install -g express
 npm-install -g learnyounode
 npm install -g jason
