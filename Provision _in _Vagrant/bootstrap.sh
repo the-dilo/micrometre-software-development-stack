@@ -35,10 +35,10 @@ npm install -g npm-check-updates
 #ruby from source LTS using RVM
 cd ~/
 apt-get update
-\curl -sSL https://get.rvm.io | bash
-source /home/vagrant/.rvm/scripts/rvm
-source ~/.profile
-
+curl -sSL https://get.rvm.io -o rvm.sh
+echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function' >> ~/.bash_profile
+source ~/.bash_profile
+rvm autolibs enable
 which rvm
 rvm list known
 rvm install 2.4.2
