@@ -1,7 +1,17 @@
-# Scripst  used to setup Ubuntu 16.04.<h1>
-Run scripts with sudo
-* Post_install. 
+# micrometre software development stack
 
+Scripts used to setup desired development tools within Ubuntu 16.04.
+
+Requirements:
+1. PC/laptop which meets or exceeds ubuntu 16.04 minimum specs.
+
+2. Virtual box
+
+3. Vagrant
+
+Please execute scripts as root (or with sudo).
+
+* Post_install. 
 
 * Eclipse-che  
 
