@@ -35,7 +35,14 @@ apt-get install -y libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-open
 #Python, interactive object oriented language, for network programming, system administration,
 apt-get install -y python3.5 python-dev python3-dev python3-pip 
 apt-get update
-#nodejs from source
+cd ~/
+#nodejs from version manager
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
+~/.nvm/nvm.sh
+~/.profile
+~/.bashrc
+nvm install 6.11.4
+                      
 cd ~/ 
 #install nodejs 
 # nvm installation script from the project's GitHub page 
