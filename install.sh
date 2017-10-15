@@ -49,7 +49,7 @@ npm install -g express
 npm-install -g learnyounode
 npm install -g jason
 npm install -g npm-check-updates
-#ruby from source LTS using RVM
+#ruby from source LTS using
 cd
 wget http://ftp.ruby-lang.org/pub/ruby/2.4/ruby-2.4.2.tar.gz
 tar -xzvf ruby-2.4.2.tar.gz
