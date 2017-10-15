@@ -37,14 +37,15 @@ apt-get install -y libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-open
 apt-get install -y python3.5 python-dev python3-dev python3-pip 
 apt-get update
 cd ~/
-#nodejs from version manager
+#nodejs from version manager work around to compliling from source
 # nvm installation script from the project's GitHub page 
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
-#Run the script with bash:
-~/.nvm/nvm.sh
 #source ~bashrc this makes all the diffrence  ~/.profile file to use the file.
-~/.profile
-~/.bashrc
+source ~/.nvm source nvm.sh
+source ~/.nvm source bash_completion
+#source ~bashrc this makes all the diffrence  ~/.profile file to use the file.
+source ~/.profile
+source ~/.bashrc
 #install the current LTS
 nvm install 6.11.4
 #choose the default version                      
