@@ -9,7 +9,7 @@ add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) univ
 add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner" 
 apt-get update
 apt-get upgrade -y
-#uncoment this section fo desktop applications as needed 
+#uncomment this section fo desktop applications as needed 
 #testing new GUI replacing unity
 #apt-get --no-install-recommends install -y gnome gnome-shell nautilus network-manager  
 #firefox form mozila
