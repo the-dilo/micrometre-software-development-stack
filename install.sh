@@ -1,5 +1,6 @@
 # /bin/bash
 #Update synchronizes list of available packages with the servers in source repositories.
+apt-get update
 #install some base packages
 apt-get install -y aptitude gksu git-core build-essential automake checkinstall software-properties-common python-software-properties python-dev cmake ca-certificates unzip openssh-server bash-completion
 #add extra the repositories    
