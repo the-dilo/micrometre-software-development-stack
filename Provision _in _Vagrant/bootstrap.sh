@@ -10,9 +10,10 @@ apt-get update
 cd ~
 curl -sL https://deb.nodesource.com/setup_6.11.4 -o nodesource_setup.sh
 #And run the script
-bash nodesource_setup.sh
+cd ~
+curl -sL https://deb.nodesource.com/setup_6.x |  -E bash -
 apt-get update
-apt-get install nodejs
+apt-get install -y nodejs
 node -v
 #install packages  install it globally add the -g flag:
 npm install -g express
