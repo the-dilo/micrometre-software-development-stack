@@ -38,7 +38,7 @@ apt-get install -y libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-open
 apt-get install -y python3.5 python-dev python3-dev python3-pip 
 apt-get update
 cd ~
-curl -sL https://deb.nodesource.com/setup_6.x |  -E bash -
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 apt-get update
 apt-get install -y nodejs
 node -v

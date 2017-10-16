@@ -8,10 +8,7 @@ apt-get install -y python3.5 python-dev python3-dev python3-pip
 apt-get update
 #install nodejs 
 cd ~
-curl -sL https://deb.nodesource.com/setup_6.11.4 -o nodesource_setup.sh
-#And run the script
-cd ~
-curl -sL https://deb.nodesource.com/setup_6.x |  -E bash -
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 apt-get update
 apt-get install -y nodejs
 node -v
