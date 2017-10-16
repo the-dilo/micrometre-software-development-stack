@@ -1,11 +1,26 @@
-#!/usr/bin/env bash
 
-source /home/vagrant/.rvm/scripts/rvm # changed, used to be /usr/local/rvm/scripts/rvm
+ #!/usr/bin/env bash
 
-rvm use --default --install $1        # changed, used to not set --default
+ source $HOME/.rvm/scripts/rvm || source /etc/profile.d/rvm.sh
 
-shift
+ rvm use --default --install $1
 
-if (( $# ))
-  then gem install $@
-fi
+ shift
+
+ if (( $# ))
+ then gem install $@
+ fi
+
+ rvm cleanup all
+ 
+
+
+#source /home/vagrant/.rvm/scripts/rvm # changed, used to be /usr/local/rvm/scripts/rvm
+
+#rvm use --default --install $1        # changed, used to not set --default
+
+#shift
+
+#if (( $# ))
+#  then gem install $@
+#fi
