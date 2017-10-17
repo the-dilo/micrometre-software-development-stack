@@ -11,7 +11,7 @@ apt-get update
 apt-get upgrade -y
 #uncomment this section fo desktop applications as needed 
 #testing new GUI replacing unity
-apt-get --no-install-recommends install -y gnome gnome-shell nautilus network-manager  
+apt-get install -y --no-install-recommends xorg gnome-core gnome-system-tools gnome-app-install nautilus network-manager  
 #firefox form mozila
 wget http://ftp.mozilla.org/pub/firefox/releases/53.0/linux-x86_64/en-US/firefox-53.0.tar.bz2
 tar xvf firefox*.tar.bz2
@@ -64,3 +64,48 @@ gem install rubygems-update
 #install shell packages 
 apt-get install -y vim tmux zsh 
 apt-get update
+###############################################################################
+# Get rid of annoyances and extraneous error messages
+###############################################################################
+
+echo "remove \"stdin is not a tty\" error message"
+sed -i 's/^mesg n$//g' /root/.profile
+
+echo "set locale to en_US"
+# http://serverfault.com/questions/500764/dpkg-reconfigure-unable-to-re-open-stdin-no-file-or-directory
+# Set the LC_CTYPE so that auto-completion works and such.
+
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+locale-gen en_US.UTF_8 en_US.UTF-8
+dpkg-reconfigure locales
+update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+echo -e "LC_ALL=\"en_US.UTF-8\"\nLANG=\"en_US.UTF-8\"" > /etc/default/locale
+#vim vundle plugin manager
+cd ~/
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+#Configure Plugins Put this at the top of your .vimrc to use Vundle. 
+cat > $HOME/.vimrc <<EOF
+set nocompatible              " be iMproved, required
+filetype off                  " required
+" set the runtime path to include Vundle and initialize
+ set rtp+=~/.vim/bundle/Vundle.vim
+ call vundle#begin()
+"let Vundle manage Vundle, required
+ Plugin 'VundleVim/Vundle.vim'
+"file manager"
+ Plugin 'scrooloose/nerdtree'
+"open NERDTree with Ctrl+n"
+map <C-n> :NERDTreeToggle<CR>
+let g:airline#extensions#tabline#enabled = 1
+" Now we can turn our filetype functionality back on
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required  include
+EOF
+#this will run the vim command to install the plugins
+vim -c 'PluginInstall' -c 'qa!'
+#make zsh defaul shell
+chsh -s $(which zsh) $(whoami)
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
