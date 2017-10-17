@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/usr/bin/env bash
 #Update synchronizes list of available packages with the servers in source repositories.
 apt-get update
 #install some base packages
