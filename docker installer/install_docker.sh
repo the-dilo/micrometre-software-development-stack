@@ -1,4 +1,4 @@
-#/bin/bash
+#!/usr/bin/env bash
 apt-get update
 #Step 1 — Installing Docker add the GPG key for the official Docker repository to the system:
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -

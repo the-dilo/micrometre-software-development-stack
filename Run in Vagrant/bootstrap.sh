@@ -1,4 +1,4 @@
-# /bin/bash
+#!/usr/bin/env bash
 #dependecies for building 
 apt-get update
 apt-get install -y git-core curl zlib1g-dev build-essential checkinstall automake libssl-dev libreadline-dev libyaml-dev cmake wget unzip openssh-server bash-completion 
