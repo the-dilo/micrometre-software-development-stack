@@ -6,12 +6,6 @@ add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
 apt-get update
 node -v
-#install packages  install it globally add the -g flag:
-npm install -g express
-npm-install -g learnyounode
-npm install -g jason
-npm install -g npm-check-updates
-
 #install shell packages to setup tthe IDE
 apt-get install -y vim tmux zsh 
 apt-get update
