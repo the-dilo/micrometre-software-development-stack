@@ -17,7 +17,6 @@
     openssh-server \
     bash-completion \
     zlib1g-dev \
-    build-essential checkinstall 
     automake \
     libssl-dev \
     libreadline-dev \
@@ -29,8 +28,7 @@
     libcurl4-openssl-dev \
     python-software-properties \
     libffi-dev \
-    libssl-dev \
-    libffi-dev 
+ 
 #Python, interactive object oriented language, for network programming, system administration,
     apt-get update && \
     apt-get install -y \
