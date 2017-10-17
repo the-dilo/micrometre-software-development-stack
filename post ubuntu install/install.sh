@@ -11,7 +11,7 @@ apt-get update
 apt-get upgrade -y
 #uncomment this section fo desktop applications as needed 
 #testing new GUI replacing unity
-apt-get install -y --no-install-recommends xorg gnome-core  gnome-app-install nautilus network-manager  
+apt-get install -y --no-install-recommends xorg gnome-core gnome-app-install nautilus network-manager  
 #firefox form mozila
 wget http://ftp.mozilla.org/pub/firefox/releases/53.0/linux-x86_64/en-US/firefox-53.0.tar.bz2
 tar xvf firefox*.tar.bz2
@@ -107,5 +107,5 @@ EOF
 #this will run the vim command to install the plugins
 vim -c 'PluginInstall' -c 'qa!'
 #make zsh defaul shell
-chsh -s $(which zsh) $(whoami)
+chsh -s $(which zsh)
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh

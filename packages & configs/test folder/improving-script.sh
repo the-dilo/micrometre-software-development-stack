@@ -48,7 +48,6 @@ add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) univ
     apt-get install -y --no-install-recommends \
     xorg \
     gnome-core \
-    gnome-system-tools \
     gnome-app-install \
     nautilus \
     network-manager  
@@ -128,5 +127,5 @@ EOF
 #this will run the vim command to install the plugins
 vim -c 'PluginInstall' -c 'qa!'
 #make zsh defaul shell
-chsh -s $(which zsh) $(whoami)
+chsh -s $(which zsh)
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
