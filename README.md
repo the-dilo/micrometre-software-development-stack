@@ -3,9 +3,17 @@
 Scripts used to setup desired development tools within Ubuntu 16.04.  
 
 Why use these scripts?  
+Quickly create an environmment for developing applications with various languages.   
+  
+
 
 What's in this Stack?  
-
+IDE's:  
+Cloud9  
+Eclipse- Che  
+  
+Dev environments for:  
+Ruby  
 
 
 Requirements:
