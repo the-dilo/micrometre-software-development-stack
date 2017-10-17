@@ -90,6 +90,8 @@ cd ruby-2.4.2/
 make
 sudo make install
 ruby -v
+cd
+rm -rf ruby-2.4.2
 #gems ruby packages
 gem install rails 5.1.4
 gem install bundler
