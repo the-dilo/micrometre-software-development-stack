@@ -86,6 +86,7 @@ npm install -g npm-check-updates
 cd
 wget http://ftp.ruby-lang.org/pub/ruby/2.4/ruby-2.4.2.tar.gz
 tar -xzvf ruby-2.4.2.tar.gz
+rm  ruby-2.4.2.tar.gz
 cd ruby-2.4.2/
 ./configure
 make
@@ -124,7 +125,7 @@ let g:airline#extensions#tabline#enabled = 1
 call vundle#end()            " required
 filetype plugin indent on    " required  include
 EOF
-#this will run the vim command to install the plugins
+#this will run the vim command to install the plugin
 vim -c 'PluginInstall' -c 'qa!'
 #make zsh defaul shell
 chsh -s $(which zsh)
