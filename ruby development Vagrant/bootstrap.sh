@@ -16,7 +16,6 @@ node -v
 npm install -g express
 npm install -g jason
 npm install -g npm-check-updates
-#install shell packages to setup tthe IDE
 apt-get update
 ###############################################################################
 # Get rid of annoyances and extraneous error messages
