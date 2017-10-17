@@ -11,9 +11,9 @@ Vagrant.configure("2") do |config|
       mgmt_config.vm.hostname = "mgmt"
       mgmt_config.vm.provider "virtualbox" do |vb|
       end
-
-config.vm.provision :shell, path: "install-rvm.sh", args: "stable", privileged: false
- config.vm.provision :shell, path: "install-ruby.sh", args: "2.4.2", privileged: false
+      mgmt_config.vm.provision :shell, path: "bootstrap.sh"
+      config.vm.provision :shell, path: "install-rvm.sh", args: "stable", privileged: false
+      config.vm.provision :shell, path: "install-ruby.sh", args: "2.4.2", privileged: false
 
   end
 end
