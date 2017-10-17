@@ -17,20 +17,24 @@ npm install -g express
 npm-install -g learnyounode
 npm install -g jason
 npm install -g npm-check-updates
-#ruby from source LTS using
-cd
-wget http://ftp.ruby-lang.org/pub/ruby/2.4/ruby-2.4.2.tar.gz
-tar -xzvf ruby-2.4.2.tar.gz
-cd ruby-2.4.2/
-./configure
-make
-sudo make install
-ruby -v
-#gems ruby packages
-gem install rails 5.1.4
-gem install bundler
-gem install rake
-gem install rubygems-update
 #install shell packages to setup tthe IDE
 apt-get install -y vim tmux zsh 
 apt-get update
+# Get rid of annoyances and extraneous error messages
+###############################################################################
+
+echo "remove \"stdin is not a tty\" error message"
+sed -i 's/^mesg n$//g' /root/.profile
+
+echo "set locale to en_US"
+# http://serverfault.com/questions/500764/dpkg-reconfigure-unable-to-re-open-stdin-no-file-or-directory
+# Set the LC_CTYPE so that auto-completion works and such.
+
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+locale-gen en_US.UTF_8 en_US.UTF-8
+dpkg-reconfigure locales
+update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+echo -e "LC_ALL=\"en_US.UTF-8\"\nLANG=\"en_US.UTF-8\"" > /etc/default/locale
+

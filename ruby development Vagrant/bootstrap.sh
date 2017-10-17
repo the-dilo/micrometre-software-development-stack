@@ -34,4 +34,4 @@ export LC_ALL=en_US.UTF-8
 locale-gen en_US.UTF_8 en_US.UTF-8
 dpkg-reconfigure locales
 update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
-#echo -e "LC_ALL=\"en_US.UTF-8\"\nLANG=\"en_US.UTF-8\"" > /etc/default/locale
+echo -e "LC_ALL=\"en_US.UTF-8\"\nLANG=\"en_US.UTF-8\"" > /etc/default/locale
