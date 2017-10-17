@@ -5,11 +5,11 @@
 
  rvm use --default --install $1
 
- shift
+# shift
 
- if (( $# ))
- then gem install $@
- fi
+# if (( $# ))
+# then gem install $@
+# fi
 
  rvm cleanup all
  
