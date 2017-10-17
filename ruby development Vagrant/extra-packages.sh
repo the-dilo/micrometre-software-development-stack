@@ -11,12 +11,7 @@ npm install -g express
 npm-install -g learnyounode
 npm install -g jason
 npm install -g npm-check-updates
-ruby -v
-#gems ruby packages
-gem install rails 5.1.4
-gem install bundler
-gem install rake
-gem install rubygems-update
+
 #install shell packages to setup tthe IDE
 apt-get install -y vim tmux zsh 
 apt-get update
