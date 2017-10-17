@@ -6,12 +6,12 @@ apt-get install -y aptitude gksu git-core build-essential automake checkinstall 
 #add extra the repositories    
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
-add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner" 
+#add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner" 
 apt-get update
 apt-get upgrade -y
 #uncomment this section fo desktop applications as needed 
 #testing new GUI replacing unity
-apt-get install -y --no-install-recommends xorg gnome-core gnome-system-tools gnome-app-install nautilus network-manager  
+apt-get install -y --no-install-recommends xorg gnome-core  gnome-app-install nautilus network-manager  
 #firefox form mozila
 wget http://ftp.mozilla.org/pub/firefox/releases/53.0/linux-x86_64/en-US/firefox-53.0.tar.bz2
 tar xvf firefox*.tar.bz2

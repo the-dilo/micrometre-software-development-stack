@@ -42,7 +42,7 @@
 #add extra the repositories    
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
-add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner" 
+#add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner" 
 #testing new GUI replacing unity
     apt-get update && \
     apt-get install -y --no-install-recommends \
