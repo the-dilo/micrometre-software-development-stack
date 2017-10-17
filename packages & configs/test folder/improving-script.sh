@@ -46,7 +46,6 @@ add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) univ
     apt-get install -y --no-install-recommends \
     xorg \
     gnome-core \
-    gnome-app-install \
     nautilus \
     network-manager  
 #firefox form mozila
