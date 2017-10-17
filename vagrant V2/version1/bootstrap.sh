@@ -14,7 +14,6 @@ apt-get install -y nodejs
 node -v
 #install packages  install it globally add the -g flag:
 npm install -g express
-npm-install -g learnyounode
 npm install -g jason
 npm install -g npm-check-updates
 #install shell packages to setup tthe IDE
