@@ -5,7 +5,6 @@ apt-get update
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
 apt-get update
-apt-get upgrade -y
 node -v
 #install packages  install it globally add the -g flag:
 npm install -g express
