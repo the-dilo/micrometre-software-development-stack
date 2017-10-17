@@ -23,29 +23,20 @@ We chose to download the Debian version as Ubuntu is based upon it.
 Some Browsers (Google Chrome) may warn you that: "this type of file can harm your computer" after download, just click "keep" and open the file as normal.  
 Ubuntu Software Centre should handle the installation so it can handle its removal (if needed).  
 
-Testing the installations:  
+Testing the installations on other environments.   
+Please execute scripts as root (or with sudo), if you are runnig the script outside Vagrant using Post_install folder. For Vagrant login with
+vagrant ssh 
+
+Editors, SDK, and IDE
+* Cloud9 SDK   development environment 
+* Eclipse-che  Cloud IDE in a docker container with persistent data volume.
+* Vim with vundle and extra plugins
 
 
 
 
-Please execute scripts as root (or with sudo).
-
-* Post_install. 
-
-* Eclipse-che  
-
-Cloud IDE in a docker container with persistent data volume.
-
-* Gems-npm_webdriver. 
-
-
-
-Nodejs and ruby-on rails with additional packeges for browser automation.
-* Remove-bloat. 
 
 Removes packeges not allways used. 
-
-
 note to add
 Adds extra packages.
 shutdown applet after installing ubuntu

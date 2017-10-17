@@ -11,25 +11,25 @@ apt-get update
 apt-get upgrade -y
 #uncomment this section fo desktop applications as needed 
 #testing new GUI replacing unity
-#apt-get --no-install-recommends install -y gnome gnome-shell nautilus network-manager  
+apt-get --no-install-recommends install -y gnome gnome-shell nautilus network-manager  
 #firefox form mozila
-#wget http://ftp.mozilla.org/pub/firefox/releases/53.0/linux-x86_64/en-US/firefox-53.0.tar.bz2
-#tar xvf firefox*.tar.bz2
-#rm firefox-53.0.tar.bz2
-#mv firefox/ /opt
-#ln -s /opt/firefox/firefox /usr/bin/firefox
+wget http://ftp.mozilla.org/pub/firefox/releases/53.0/linux-x86_64/en-US/firefox-53.0.tar.bz2
+tar xvf firefox*.tar.bz2
+rm firefox-53.0.tar.bz2
+mv firefox/ /opt
+ln -s /opt/firefox/firefox /usr/bin/firefox
 #install google chrome stable
-#wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-#dpkg -i google-chrome-stable_current_amd64.deb
-#apt install -y -f
-#apt-get update
-#rm google-chrome-stable_current_amd64.deb
-#dpkg --configure -a
-#apt-get update
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dpkg -i google-chrome-stable_current_amd64.deb
+apt install -y -f
+apt-get update
+rm google-chrome-stable_current_amd64.deb
+dpkg --configure -a
+apt-get update
 #Remove “System Program Problem Detected” Messages From Ubuntu
-#rm /var/crash/*
-#apt-get update
-#apt-get autoremove
+rm /var/crash/*
+apt-get update
+apt-get autoremove
 #dependecies for building 
 apt-get update
 apt-get install -y git-core curl zlib1g-dev build-essential checkinstall automake libssl-dev libreadline-dev libyaml-dev cmake
@@ -61,6 +61,6 @@ gem install rails 5.1.4
 gem install bundler
 gem install rake
 gem install rubygems-update
-#install shell packages to setup tthe IDE
+#install shell packages 
 apt-get install -y vim tmux zsh 
 apt-get update
