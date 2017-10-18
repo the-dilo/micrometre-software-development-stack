@@ -12,9 +12,9 @@ apt-get update
 cd ~/
 chsh -s /usr/bin/zsh
 cd ~/
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/VundleVim/Vundle.vim.git /home/vagrant/vim/bundle/Vundle.vim
 #Configure Plugins Put this at the top of your .vimrc to use Vundle. 
-cat > $HOME/.vimrc <<EOF
+cat >  /home/vagrant/.vimrc <<EOF
 set nocompatible              " be iMproved, required
 filetype off                  " required
 " set the runtime path to include Vundle and initialize
@@ -34,7 +34,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required  include
 EOF
 vim -c 'PluginInstall' -c 'qa!'
-#oh-my-zsh.git insatall
+#oh-my-zsh.git insatal
 git clone git://github.com/robbyrussell/oh-my-zsh.git /home/vagrant/.oh-my-zsh
 cp /home/vagrant/.oh-my-zsh/templates/zshrc.zsh-template /home/vagrant/.zshrc
 chsh -s /usr/bin/zsh vagrant
