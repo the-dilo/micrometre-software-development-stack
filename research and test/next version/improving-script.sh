@@ -28,6 +28,7 @@
     libcurl4-openssl-dev \
     python-software-properties \
     libffi-dev \
+    language-pack-en \
  
 #Python, interactive object oriented language, for network programming, system administration,
     apt-get update && \
