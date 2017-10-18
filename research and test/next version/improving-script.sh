@@ -42,13 +42,6 @@
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
 add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
 #add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner" 
-#testing new GUI replacing unity
-    apt-get update && \
-    apt-get install -y --no-install-recommends \
-    xorg \
-    gnome-core \
-    nautilus \
-    network-manager  
 #firefox form mozila
 wget http://ftp.mozilla.org/pub/firefox/releases/53.0/linux-x86_64/en-US/firefox-53.0.tar.bz2
 tar xvf firefox*.tar.bz2
@@ -77,8 +70,6 @@ apt-get install -y nodejs
 node -v
 #install packages  install it globally add the -g flag:
 npm install -g express
-npm-install -g learnyounode
-npm install -g jason
 npm install -g npm-check-updates
 #ruby from source LTS using
 cd
@@ -128,5 +119,5 @@ EOF
 #this will run the vim command to install the plugin
 vim -c 'PluginInstall' -c 'qa!'
 #make zsh defaul shell
-chsh -s $(which zsh)
+chsh -s /usr/bin/zsh
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
