@@ -34,6 +34,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required  include
 EOF
 vim -c 'PluginInstall' -c 'qa!'
-wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
-
-
+#oh-my-zsh.git insatall
+git clone git://github.com/robbyrussell/oh-my-zsh.git /home/vagrant/.oh-my-zsh
+cp /home/vagrant/.oh-my-zsh/templates/zshrc.zsh-template /home/vagrant/.zshrc
+chsh -s /usr/bin/zsh vagrant
