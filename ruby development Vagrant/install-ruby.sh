@@ -5,22 +5,13 @@
 
  rvm use --default --install $1
 
-# shift
+ shift
 
-# if (( $# ))
-# then gem install $@
-# fi
+ if (( $# ))
+ then gem install $@
+ fi
 
  rvm cleanup all
  
 
 
-#source /home/vagrant/.rvm/scripts/rvm # changed, used to be /usr/local/rvm/scripts/rvm
-
-#rvm use --default --install $1        # changed, used to not set --default testing
-
-#shift
-
-#if (( $# ))
-#  then gem install $@
-#fi
