@@ -1,8 +1,16 @@
+# Defines our Vagrant environment
+#
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
 Vagrant.configure('2') do |config|
-  # -- snipped --
+ # create mgmt 
+  config.vm.define :mgmt do |mgmt_config|
+      mgmt_config.vm.box = "ubuntu/xenial64"
+      mgmt_config.vm.hostname = "mgmt"
+      mgmt_config.vm.provider "virtualbox" do |vb|
+      end
   config.vm.provision :shell do |s|
     s.path = 'vagrant/provision.sh'
   end
   config.vm.synced_folder '.', '/home/vagrant/myapp'
-  # -- snipped --
 end
