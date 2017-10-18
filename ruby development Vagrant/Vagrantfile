@@ -15,8 +15,5 @@ Vagrant.configure("2") do |config|
       config.vm.provision :shell, path: "install-rvm.sh", args: "stable", privileged: false
       config.vm.provision :shell, path: "install-ruby.sh", args: "2.4.2", privileged: false
       config.vm.provision :shell, path: "extra-packages.sh"
-      config.vm.provision :shell, path: "shell-ide.sh"
-     # config.vm.provision "file", source: ".vimrc", destination: "..vimrc"
-
   end
 end
