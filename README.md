@@ -3,9 +3,17 @@
 Scripts used to setup desired development tools within Ubuntu 16.04.  
 
 Why use these scripts?  
+Quickly create an environmment for developing applications with various languages.   
+  
+
 
 What's in this Stack?  
-
+IDE's:  
+Cloud9  
+Eclipse- Che  
+  
+Dev environments for:  
+Ruby  
 
 
 Requirements:
@@ -24,8 +32,8 @@ Some Browsers (Google Chrome) may warn you that: "this type of file can harm you
 Ubuntu Software Centre should handle the installation so it can handle its removal (if needed).  
 
 Testing the installations on other environments.   
-Please execute scripts as root (or with sudo), if you are runnig the script outside Vagrant using Post_install folder. For Vagrant login with
-vagrant ssh 
+Please execute scripts as root (or with sudo), if you are runnig the script outside Vagrant using Post_install folder.  
+For secure Vagrant login with ssh, please use "vagrant ssh" to access your virtual machine.   
 
 Editors, SDK, and IDE
 * Cloud9 SDK   development environment 
