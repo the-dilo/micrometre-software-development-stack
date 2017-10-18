@@ -11,9 +11,6 @@ apt-get install -y vim tmux zsh
 apt-get update
 cd ~/
 chsh -s /usr/bin/zsh
-wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
-#!/bin/bash
-#Set up Vundle:
 cd ~/
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 #Configure Plugins Put this at the top of your .vimrc to use Vundle. 
@@ -37,5 +34,6 @@ call vundle#end()            " required
 filetype plugin indent on    " required  include
 EOF
 vim -c 'PluginInstall' -c 'qa!'
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
 
 
